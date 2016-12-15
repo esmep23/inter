@@ -1,0 +1,29 @@
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left sliding"><a href="noticias.html" class="back link" ><i class="f7-icons">left</i></a></div>
+    <div class="center sliding">NOTICIA</div>
+    <div class="right"></div>
+  </div>
+</div>
+<div class="pages">
+  <div data-page="noticia" class="page noticia">
+    <div class="page-content">
+        <div class="content-block-inner">
+          <div id="inside_imagenNoticia" style="background-image: url({{featured_image.attachment_meta.sizes.large.url}})">
+          </div>
+          <hr/>
+          <div class="content-block-title">
+            <p>{{date}}</p>
+            <h2>{{title}}</h2>
+          </div>
+          <hr/>
+          <!-- This block will be inset only on tablets -->
+          <div class="content-block">
+              {{acf.contenido_app}}
+            </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

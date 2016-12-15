@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>INTERLAB</title>
+    <link rel="stylesheet" href="../dist/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/my-app.css">
+    
+
+
+  </head>
+  <body>
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block panel-menu">
+        <a href="#"><img src="imagenes/logo.png" class="logoApp" /></a>
+        <div class="list-block">
+                <ul>
+                  <li><a href="index.html" data-context-name="index" class="item-link item-content">
+                      <div class="item-inner">
+                        <div class="item-title menu"><i class="f7-icons">circle</i><span>NOTICIAS</span></div>
+                      </div></a></li>
+                  <!--<li><a href="cars.html" data-context-name="cars" class="item-link item-content">
+                      <div class="item-inner">
+                        <div class="item-title">CARS</div>
+                      </div></a></li>-->
+                  <li><a href="talentohumano.html" data-context-name="talentohumano" class="item-link item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title menu"><i class="f7-icons">circle</i><span>TALENTO HUMANO</span></div>
+                      </div></a></li>
+                  <li><a href="cotizador.html" class="item-link item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title menu"><i class="f7-icons">circle</i><span>COTIZADOR</span></div>
+                      </div></a></li>
+                  <li><a href="sucursales.html" data-context-name="sucursales" class="item-link item-content">
+                      <div class="item-inner">
+                        <div class="item-title menu"><i class="f7-icons">circle</i><span>SUCURSALES</span></div>
+                      </div></a></li>
+                  <li><a href="consulta.html" data-context-name="consulta" class="item-link item-content">
+                      <div class="item-inner">
+                        <div class="item-title menu"><i class="f7-icons">circle</i><span>CONSULTA EXAMENES</span></div>
+                      </div></a></li>
+                </ul>
+              </div>
+      </div>
+    </div>
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <div class="views">
+      <div class="pageC"></div>
+      <div class="view view-main">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left"><a href="#" class="link icon-only open-panel"><i class="f7-icons">bars</i></a></div>
+            <div class="center sliding">NOTICIAS</div>
+          </div>
+        </div>
+        <div class="pages navbar-through toolbar-through">
+              <div data-page="index" class="page">
+                <div class="page-content">
+                  <div id="listNoticias" class="list-block media-list">
+                   
+                                
+<!--
+                                <ul>
+                                    <li class="row">
+                                    <a href="noticia.html" class="item-content item-link" data-context-name="index.0">
+                                      <div class="item-inner col-66">
+                                        <p class="item-title">2016-11-29T17:14:46</p>
+                                        <div class="item-subtitle">Laboratorio de Autoinmunidad</div>
+                                      </div>
+                                      <div class="item-media col-33"><img src="http://interlab.com.ec/wp-content/uploads/2016/11/factores-150x150.jpg" width="150"></div>
+                                    </a>
+                                    </li>
+                                
+                                    <li class="row">
+                                    <a href="noticia.html" class="item-content item-link" data-context-name="index.1">
+                                      <div class="item-inner col-66">
+                                        <p class="item-title">2016-11-22T18:16:28</p>
+                                        <div class="item-subtitle">Tecnología moderna en el diagnóstico y control del paciente con  VIH/SIDA</div>
+                                      </div>
+                                      <div class="item-media col-33"><img src="http://interlab.com.ec/wp-content/uploads/2016/11/imagenInterlab-150x150.jpg" width="150"></div>
+                                    </a>
+                                    </li>
+                                
+                                    <li class="row">
+                                    <a href="noticia.html" class="item-content item-link" data-context-name="index.2">
+                                      <div class="item-inner col-66">
+                                        <p class="item-title">2016-11-14T18:25:32</p>
+                                        <div class="item-subtitle">EL LABORATORIO DE MICROBIOLOGIA Y EL USO RACIONAL DE ANTIBIÓTICOS</div>
+                                      </div>
+                                      <div class="item-media col-33"><img src="http://interlab.com.ec/wp-content/uploads/2016/11/MICROBIOLOGIAYANTIBIOTICOS-150x150.jpg" width="150"></div>
+                                    </a>
+                                    </li>
+                                
+                                    <li class="row">
+                                    <a href="noticia.html" class="item-content item-link" data-context-name="index.3">
+                                      <div class="item-inner col-66">
+                                        <p class="item-title">2016-11-08T17:45:30</p>
+                                        <div class="item-subtitle">EL LABORATORIO CLÍNICO EN EL DIAGNÓSTICO DE LA DIABETES</div>
+                                      </div>
+                                      <div class="item-media col-33"><img src="http://interlab.com.ec/wp-content/uploads/2016/11/diabetes-150x150.png" width="150"></div>
+                                    </a>
+                                    </li>
+                                
+                                    <li class="row">
+                                    <a href="noticia.html" class="item-content item-link" data-context-name="index.4">
+                                      <div class="item-inner col-66">
+                                        <p class="item-title">2016-10-29T17:35:00</p>
+                                        <div class="item-subtitle">INTERLAB: MEJORES SERVICIOS Y MEJORES RESULTADOS</div>
+                                      </div>
+                                      <div class="item-media col-33"><img src="http://interlab.com.ec/wp-content/uploads/2016/10/inter1-150x150.png" width="150"></div>
+                                    </a>
+                                    </li>
+                                
+                                    <li class="row">
+                                    <a href="noticia.html" class="item-content item-link" data-context-name="index.5">
+                                      <div class="item-inner col-66">
+                                        <p class="item-title">2016-10-24T18:53:00</p>
+                                        <div class="item-subtitle">ALERGIAS: TECNOLOGÍA INNOVADORA PARA SU DIAGNÓSTICO</div>
+                                      </div>
+                                      <div class="item-media col-33"><img src="http://interlab.com.ec/wp-content/uploads/2016/10/interlab-alergias-150x150.jpg" width="150"></div>
+                                    </a>
+                                    </li>
+                                
+                                    <li class="row">
+                                    <a href="noticia.html" class="item-content item-link" data-context-name="index.6">
+                                      <div class="item-inner col-66">
+                                        <p class="item-title">2016-10-17T15:54:38</p>
+                                        <div class="item-subtitle">DIAGNÓSTICO ETIOLÓGICO POR BIOLOGÍA MOLECULAR</div>
+                                      </div>
+                                      <div class="item-media col-33"><img src="http://interlab.com.ec/wp-content/uploads/2016/10/meningitis_-150x150.jpg" width="150"></div>
+                                    </a>
+                                    </li>
+                                
+                                    <li class="row">
+                                    <a href="noticia.html" class="item-content item-link" data-context-name="index.7">
+                                      <div class="item-inner col-66">
+                                        <p class="item-title">2016-10-10T16:29:30</p>
+                                        <div class="item-subtitle">Nuestras Buenas Prácticas de Laboratorio Clínico  Garantizan la Calidad de sus Resultados</div>
+                                      </div>
+                                      <div class="item-media col-33"><img src="http://interlab.com.ec/wp-content/uploads/2016/10/3-150x150.jpg" width="150"></div>
+                                    </a>
+                                    </li>
+                                
+                                    <li class="row">
+                                    <a href="noticia.html" class="item-content item-link" data-context-name="index.8">
+                                      <div class="item-inner col-66">
+                                        <p class="item-title">2016-10-04T19:23:07</p>
+                                        <div class="item-subtitle">En Infecciones del Tracto Urinario, Tecnologías innovadoras para resultados precisos y oportunos</div>
+                                      </div>
+                                      <div class="item-media col-33"><img src="http://interlab.com.ec/wp-content/uploads/2016/10/123-150x150.bmp" width="150"></div>
+                                    </a>
+                                    </li>
+                                
+                                    <li class="row">
+                                    <a href="noticia.html" class="item-content item-link" data-context-name="index.9">
+                                      <div class="item-inner col-66">
+                                        <p class="item-title">2016-09-27T16:44:27</p>
+                                        <div class="item-subtitle">Diagnóstico de infección por Helicobacter pilori: Prueba de aliento, el estándar de oro</div>
+                                      </div>
+                                      <div class="item-media col-33"><img src="http://interlab.com.ec/wp-content/uploads/2016/09/1_001-150x150.png" width="150"></div>
+                                    </a>
+                                    </li>
+                                
+                                </ul>
+-->
+                       
+                          <ul id="ind">{{#each this}}
+                            <li class="row">
+                              <a href="noticia.html" class="item-content item-link" data-context-name="index.{{@index}}">
+                                <div class="item-inner col-66">
+                                  <p class="item-title"><div id="fecha">{{date}}</div></p>
+                                  <div class="item-subtitle">{{title}}</div>
+                                </div>
+                                <div id="thumbnail_imagenNoticia" class="item-media col-33" style="background-image: url({{featured_image.attachment_meta.sizes.thumbnail.url}})">
+                                  <div class="cropNews">
+                                    <!--<img src="{{featured_image.attachment_meta.sizes.thumbnail.url}}" width="150">-->
+                                  </div>
+                                </div>
+                              </a>
+                            </li>{{/each}}
+                          </ul>
+                       
+                  </div>
+                </div>
+              </div>
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+        <script type="text/javascript" src="../dist/js/framework7.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/interlab.js"></script>
+    
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YAqeEFMu0ohvdr8h2Z6jhJW17pQSeII&sensor=false"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.googlemap/1.5/jquery.googlemap.min.js"></script>
+
+   </body>
+</html>

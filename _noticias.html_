@@ -1,0 +1,30 @@
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left sliding"><a href="#" class="link icon-only open-panel"><i class="f7-icons">bars</i></a></div>
+    <div class="center sliding">NOTICIAS</div>
+   
+  </div>
+</div>
+<div class="pages">
+  <div data-page="noticias" class="page">
+    <div class="page-content">
+      <div class="list-block media-list">
+       
+                  <ul>
+                  {{#each this}}
+                      <li class="row">
+                      <a href="noticia.html" class="item-content item-link" data-context-name="noticias.{{@index}}">
+                        <div class="item-inner col-66">
+                          <p class="item-title">{{date}}</p>
+                          <div class="item-subtitle">{{title}}</div>
+                        </div>
+                        <div class="item-media col-33"><img src="{{featured_image.attachment_meta.sizes.thumbnail.url}}" width="150"></div>
+                      </a>
+                      </li>
+                  {{/each}}
+                  </ul>
+       
+      </div>
+    </div>
+  </div>

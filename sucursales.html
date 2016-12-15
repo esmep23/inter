@@ -1,0 +1,271 @@
+
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left sliding"><a href="#" class="link icon-only open-panel"><i class="f7-icons">bars</i></a></div>
+    <div class="center sliding">SUCURSALES</div>
+    <div class="right"></div>
+  </div>
+</div>
+<div class="pages">
+  <div data-page="sucursales" class="page">
+    <div id="map" style="width:100%; height:45%; display: inline-flex;"></div>
+    <div class="page-content" style="height:55%; display: inline-flex; padding:0">
+      
+        <div class="list-block">
+
+          <ul>
+            <!-- NORTE -->
+            <li class="accordion-item"><a href="#norte" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">GYE - SECTOR NORTE</div>
+                </div></a>
+              <div class="accordion-item-content">
+                <div class="content-block">
+                  <ul >{{#each norte}}
+                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
+                      <hr>
+                      {{direccion}}<br/>
+                      {{telefono}}<br/>
+                      {{horario}}</li>
+                      <br/>
+                  {{/each}}
+                  </ul>
+                  
+                </div>
+              </div>
+            </li>
+            <!-- NORTE -->
+            <!-- CENTRO -->
+            <li class="accordion-item"><a href="#centro" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">GYE - SECTOR CENTRO</div>
+                </div></a>
+              <div class="accordion-item-content">
+                <div class="content-block">
+                  <ul>{{#each centro}}
+                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
+                      <hr>
+                      <li>{{direccion}}</li>
+                      <li>{{telefono}}</li>
+                      <li>{{horario}}</li>
+                      <br/>
+                  {{/each}}
+                  </ul>
+                  
+                </div>
+              </div>
+            </li>
+            <!-- CENTRO -->
+
+            <!-- SUR -->
+            <li class="accordion-item"><a href="#sur" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">GYE - SECTOR SUR</div>
+                </div></a>
+              <div class="accordion-item-content">
+                <div class="content-block">
+                  <ul>{{#each sur}}
+                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
+                      <hr>
+                      <li>{{direccion}}</li>
+                      <li>{{telefono}}</li>
+                      <li>{{horario}}</li>
+                      <br/>
+                  {{/each}}
+                  </ul>
+                  
+                </div>
+              </div>
+            </li>
+            <!-- SUR -->
+
+            <!-- SAMBORONDON -->
+            <li class="accordion-item"><a href="#samborondon" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">VÍA SAMBORONDÓN</div>
+                </div></a>
+              <div class="accordion-item-content">
+                <div class="content-block">
+                  <ul>{{#each samborondon}}
+                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
+                      <hr>
+                      <li>{{direccion}}</li>
+                      <li>{{telefono}}</li>
+                      <li>{{horario}}</li>
+                      <br/>
+                  {{/each}}
+                  </ul>
+                  
+                </div>
+              </div>
+            </li>
+            <!-- SAMBORONDON -->
+
+            <!-- LA JOYA -->
+            <li class="accordion-item"><a href="#lajoya" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">LA JOYA</div>
+                </div></a>
+              <div class="accordion-item-content">
+                <div class="content-block">
+                  <ul>{{#each lajoya}}
+                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
+                      <hr>
+                      <li>{{direccion}}</li>
+                      <li>{{telefono}}</li>
+                      <li>{{horario}}</li>
+                      <br/>
+                  {{/each}}
+                  </ul>
+                  
+                </div>
+              </div>
+            </li>
+            <!-- LA JOYA -->
+
+            <!-- DURÁN -->
+            <li class="accordion-item"><a href="#duran" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">DURÁN</div>
+                </div></a>
+              <div class="accordion-item-content">
+                <div class="content-block">
+                  <ul>{{#each duran}}
+                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
+                      <hr>
+                      <li>{{direccion}}</li>
+                      <li>{{telefono}}</li>
+                      <li>{{horario}}</li>
+                      <br/>
+                  {{/each}}
+                  </ul>
+                  
+                </div>
+              </div>
+            </li>
+            <!-- DURÁN -->
+
+
+            <!-- MILAGRO -->
+            <li class="accordion-item"><a href="#milagro" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">MILAGRO</div>
+                </div></a>
+              <div class="accordion-item-content">
+                <div class="content-block">
+                  <ul>{{#each milagro}}
+                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
+                      <hr>
+                      <li>{{direccion}}</li>
+                      <li>{{telefono}}</li>
+                      <li>{{horario}}</li>
+                      <br/>
+                  {{/each}}
+                  </ul>
+                  
+                </div>
+              </div>
+            </li>
+            <!-- MILAGRO -->
+
+
+            <!-- PORTOVIEJO -->
+            <li class="accordion-item"><a href="#portoviejo" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">PORTOVIEJO</div>
+                </div></a>
+              <div class="accordion-item-content">
+                <div class="content-block">
+                  <ul>{{#each portoviejo}}
+                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
+                      <hr>
+                      <li>{{direccion}}</li>
+                      <li>{{telefono}}</li>
+                      <li>{{horario}}</li>
+                      <br/>
+                  {{/each}}
+                  </ul>
+                  
+                </div>
+              </div>
+            </li>
+            <!-- PORTOVIEJO -->
+
+
+            <!-- MANTA -->
+            <li class="accordion-item"><a href="#manta" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">MANTA</div>
+                </div></a>
+              <div class="accordion-item-content">
+                <div class="content-block">
+                  <ul>{{#each manta}}
+                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
+                      <hr>
+                      <li>{{direccion}}</li>
+                      <li>{{telefono}}</li>
+                      <li>{{horario}}</li>
+                      <br/>
+                  {{/each}}
+                  </ul>
+                  
+                </div>
+              </div>
+            </li>
+            <!-- MANTA -->
+
+            <!-- MACHALA -->
+            <li class="accordion-item"><a href="#machala" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">MACHALA</div>
+                </div></a>
+              <div class="accordion-item-content">
+                <div class="content-block">
+                  <ul>{{#each machala}}
+                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
+                      <hr>
+                      <li>{{direccion}}</li>
+                      <li>{{telefono}}</li>
+                      <li>{{horario}}</li>
+                      <br/>
+                  {{/each}}
+                  </ul>
+                  
+                </div>
+              </div>
+            </li>
+            <!-- MACHALA -->
+
+            <!-- QUEVEDO -->
+            <li class="accordion-item"><a href="#quevedo" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">QUEVEDO</div>
+                </div></a>
+              <div class="accordion-item-content">
+                <div class="content-block">
+                  <ul onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{#each quevedo}}
+                      <li>{{local}}</li>
+                      <hr>
+                      <li>{{direccion}}</li>
+                      <li>{{telefono}}</li>
+                      <li>{{horario}}</li>
+                      <br/>
+                  {{/each}}
+                  </ul>
+                  
+                </div>
+              </div>
+            </li>
+            <!-- QUEVEDO -->
+
+
+
+
+          </ul>
+        </div>
+
+
+    </div>
+  </div>
+</div>
