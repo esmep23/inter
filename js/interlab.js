@@ -17,7 +17,7 @@ $.ajax({
       data[noti]['date'] = agruparFecha;
 
     }
-    myApp.params.template7Data['index'] = data;
+    myApp.params.template7Data['noticias'] = data;
     // Load page from about.html file to main View:
 
   },
@@ -40,13 +40,13 @@ $.ajax({
 
 
 console.log(myApp.template7Data);
-mainView.router.load({pageName: 'index'});
+//mainView.router.load({pageName: 'noticias'});
 /*
 ************************************************************************************************************************************************
 *****HOME - NOTICIAS****************************************************************************************************************************
 ************************************************************************************************************************************************
 */
-myApp.onPageBeforeInit('index', function (page) {
+myApp.onPageBeforeInit('noticias', function (page) {
     myApp.closePanel();
 });
 /*
@@ -70,10 +70,10 @@ myApp.onPageBeforeInit('sucursales', function (page) {
 });
 /*
 ************************************************************************************************************************************************
-*****CONSULTA***********************************************************************************************************************************
+*****INDEX***********************************************************************************************************************************
 ************************************************************************************************************************************************
 */
-myApp.onPageBeforeInit('consulta', function (page) {
+myApp.onPageBeforeInit('index', function (page) {
     myApp.closePanel();
 
     $( ".consultoPdf" ).click(function() {

@@ -10,6 +10,7 @@ body,html{
 .navbar .sliding{
   color: #333!important;
 }
+
 @font-face {
   font-family: 'Framework7 Icons';
   font-style: normal;
@@ -36,14 +37,17 @@ body,html{
    z-index: 6000;
    left: -410px;
 }
-
+.panel-menu .f7-icons,
+.panel-menu .framework7-icons{
+  color: #333;
+  
+}
 .f7-icons, .framework7-icons {
   font-family: 'Framework7 Icons';
   font-weight: normal;
   font-style: normal;
   font-size: 25px;
   line-height: 1;
-  color: #333;
   letter-spacing: normal;
   text-transform: none;
   display: inline-block;
@@ -108,6 +112,22 @@ img.logoApp{
 .navbar .center{
   font-weight: bolder;
 }
+
+.navbar-inner{
+  background: #009688!important;
+  color: white!important;
+}
+
+.navbar-inner .f7-icons,
+.navbar-inner .framework7-icons,
+.navbar .sliding{
+  color: white!important;
+}
+
+.view{
+  padding-top: 43px;
+}
+
 /*
 ==========================================================================================================================
 NOTICIAS
@@ -145,6 +165,7 @@ NOTICIAS
 }
 #thumbnail_imagenNoticia{
   background-size: cover;
+  margin: 2%;
 }
 #inside_imagenNoticia{
   background-size: cover;
@@ -162,6 +183,7 @@ NOTICIAS
       white-space: normal;
       text-overflow: clip;
       padding-top: 4%;
+      font-size: x-small;
 }
 
 img.imgNoticia{
@@ -180,8 +202,9 @@ img.imgNoticia{
   text-overflow: clip;
 }
 
-.list-block{
-  margin: 0;
+#ind.list-block{
+  margin: 2%!important;
+  background-color: white;
 }
 
 .noticia .content-block-title{
@@ -193,14 +216,27 @@ img.imgNoticia{
   font-weight: bolder;
 }
 
+h2.content-block-title{
+  white-space: normal!important;
+}
+
 
 #fecha{
     text-transform: uppercase;
-    font-size: small;
+    font-size: xx-small;
+    position: absolute;
+    bottom: 10%;
 }
 
 h3.titularColaborador{
   
+}
+.content-block-inner{
+  margin: 0!important;
+  padding: 0!important;
+}
+.content-block p{
+  text-align: justify;
 }
 /*
 ==========================================================================================================================
@@ -235,3 +271,25 @@ TALENTO HUMANO
 .item-media{
   display: inline-block!important;
 }
+
+
+#ind li.row{
+  height: 120px;
+  border-bottom: 1px solid #333;
+}
+#ind li.list-block .item-inner:after,
+.list-block .item-inner:after{
+  background-color: transparent!important;
+}
+/*
+==========================================================================================================================
+SUCURSALES
+==========================================================================================================================
+*/
+
+.accordion-item-content,
+.accordion-item-content .content-block li{
+  background: #009688!important;
+  color: white;
+}
+
