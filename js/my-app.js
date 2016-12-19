@@ -361,7 +361,7 @@ var myApp = new Framework7({
                     longitud: '-79.911245',
                     zoom: '19',
                     telefono: '04-2594010',
-                    horario: 'Lunes a <b>Domingo</b> - Atención 24 horas'
+                    horario: '<b>LU-DO:</b> Atención 24 horas'
                 },
                 {
                     local: 'Sucursal Kennedy Vieja',
@@ -370,7 +370,7 @@ var myApp = new Framework7({
                     longitud: '-79.8993265',
                     zoom: '17',
                     telefono: '04-2594010 - Ext.: 203 | Cel.: 092161884',
-                    horario: 'Lunes a Viernes: 07:00 - 19:00 horas, Sábado: 07:00 - 12:00 horas, <b>Domingo</b>: 07:00 - 12:00 horas'
+                    horario: '<b>LU-VI:</b> 07:00 - 19:00 horas, <b>SA:</b> 07:00 - 12:00 horas, <b>DO:</b> 07:00 - 12:00 horas'
                 },
                 {
                     local: 'Sucursal Kennedy Norte',
@@ -379,7 +379,7 @@ var myApp = new Framework7({
                     longitud: '-79.8995827',
                     zoom: '17',
                     telefono: '04-2594010 - Ext.: 210 | Cel.: 094902114',
-                    horario: 'Lunes a Viernes: 07:00 - 13:00 horas y 14:00 - 16:00 horas, Sábado: 07:00 - 12:00 horas'
+                    horario: '<b>LU-VI:</b> 07:00 - 13:00 horas y 14:00 - 16:00 horas, <b>SA:</b> 07:00 - 12:00 horas'
                 },
                 {
                     local: 'Sucursal Alborada',
@@ -388,7 +388,7 @@ var myApp = new Framework7({
                     longitud: '-79.9029631',
                     zoom: '18',
                     telefono: '04-2594010 - Ext.: 205 | Cel.: 092161835',
-                    horario: 'Lunes a Viernes: 06:00 - 19:00 horas, Sábado: 06:30 - 13:00 horas'
+                    horario: '<b>LU-VI:</b> 06:00 - 19:00 horas, <b>SA:</b> 06:30 - 13:00 horas'
                 },
                 {
                     local: 'Sucursal Miraflores',
@@ -397,7 +397,7 @@ var myApp = new Framework7({
                     longitud: '-79.9194882',
                     zoom: '16',
                     telefono: '04-2594010 - Ext.: 206 | Cel.: 092161799',
-                    horario: 'Lunes a Viernes: 06:00 - 18:00 horas, Sábado: 07:00 - 12:00 horas'
+                    horario: '<b>LU-VI:</b> 06:00 - 18:00 horas, <b>SA:</b> 07:00 - 12:00 horas'
                 },
                 {
                     local: 'Sucursal Adace',
@@ -415,7 +415,7 @@ var myApp = new Framework7({
                     longitud: '-79.891369',
                     zoom: '16',
                     telefono: '04-5940100 - Ext.: 212 Telf.: 04-2109300 Telf.: 04-2109301',
-                    horario: 'Lunes a Viernes: 07:00 - 13:00 horas y 14:00 - 17:00 horas, Sábado: 07:00 - 12:00 horas'
+                    horario: '<b>LU-VI:</b> 07:00 - 13:00 horas y 14:00 - 17:00 horas, <b>SA:</b> 07:00 - 12:00 horas'
                 }
             ],
             centro:[
@@ -426,7 +426,7 @@ var myApp = new Framework7({
                     longitud: '-79.8881973',
                     zoom: '17',
                     telefono: '04-2594010 - Ext.: 201 | Cel.: 092161482',
-                    horario: 'Lunes a Viernes: 07:00 - 13:00 horas y 14:00 - 17:00 horasSábado: 07:00 - 12:00 horas'
+                    horario: '<b>LU-VI:</b> 07:00 - 13:00 horas y 14:00 - 17:00 horas, <b>SA:</b> 07:00 - 12:00 horas'
                 },
                 {
                     local: 'Sucursal Mendiburo',
@@ -435,7 +435,7 @@ var myApp = new Framework7({
                     longitud: '-79.8809392',
                     zoom: '17',
                     telefono: '04-2594010 - Ext.: 209 | Cel.: 099429761',
-                    horario: 'Lunes a Viernes: 06:30 - 14:30 horas'
+                    horario: '<b>LU-VI:</b> 06:30 - 14:30 horas'
                 }
             ],
             sur:[
@@ -446,7 +446,7 @@ var myApp = new Framework7({
                     longitud: '-79.8902738',
                     zoom: '17',
                     telefono: 'Telf: 04-2594010 - Ext.: 2042',
-                    horario: 'Lunes a Viernes: 06:00 - 19:00 horas, Sábado: 06:00 - 13:00 horas'
+                    horario: '<b>LU-VI:</b> 06:00 - 19:00 horas, <b>SA:</b> 06:00 - 13:00 horas'
                 }
             ],
             samborondon:[
@@ -457,7 +457,7 @@ var myApp = new Framework7({
                     longitud: '-79.8647839',
                     zoom: '16',
                     telefono: '04-2594010 - Ext.: 202 | Cel.: 0992161450',
-                    horario: 'Lunes a Viernes: 06:00 - 18:00 horas, Sábado: 07:00 - 12:00 horas'
+                    horario: '<b>LU-VI:</b> 06:00 - 18:00 horas, <b>SA:</b> 07:00 - 12:00 horas'
                 }
             ],
             lajoya: [
@@ -468,7 +468,7 @@ var myApp = new Framework7({
                     longitud: '-79.9147385',
                     zoom: '15',
                     telefono: '04-2594010 - Ext.: 211',
-                    horario: 'Lunes a Viernes: 06:00 - 16:00 horas, Sábado: 07:00 - 12:00 horas'
+                    horario: '<b>LU-VI:</b> 06:00 - 16:00 horas, <b>SA:</b> 07:00 - 12:00 horas'
                 },
                 {
                     local: 'Edifio Xima',
@@ -477,7 +477,7 @@ var myApp = new Framework7({
                     longitud: '-79.867893',
                     zoom: '17',
                     telefono: '4-2594010 Ext. 213',
-                    horario: 'Lunes a Viernes: 07:00 - 15:00 horas'
+                    horario: '<b>LU-VI:</b> 07:00 - 15:00 horas'
                 }
             ],
             duran:[
@@ -489,7 +489,7 @@ var myApp = new Framework7({
                     longitud: '-79.8542273',
                     zoom: '17',
                     telefono: '04-2594010 - Ext.: 207 | Cel.: 0992161670',
-                    direccion: 'Lunes a Viernes: 07:00 - 13:00 horas y 14:00 - 16:00 horas, Sábado: 07:00 - 12:00 horas'
+                    direccion: '<b>LU-VI:</b> 07:00 - 13:00 horas y 14:00 - 16:00 horas, <b>SA:</b> 07:00 - 12:00 horas'
                 }
             ],
             milagro:[
@@ -500,7 +500,7 @@ var myApp = new Framework7({
                     longitud: '-79.5819997',
                     zoom: '14',
                     telefono: '04-2594010 - Ext.: 281 Telf.: 04-2975968',
-                    direccion: 'Lunes a Viernes: 07:00 - 19:00 horas, Sábado: 07:00 - 19:00 horas'
+                    direccion: '<b>LU-VI:</b> 07:00 - 19:00 horas, <b>SA:</b> 07:00 - 19:00 horas'
                 }
             ],
             portoviejo:[
@@ -511,7 +511,7 @@ var myApp = new Framework7({
                     longitud: '-80.4488918',
                     zoom: '17',
                     telefono: '04-2594010 - Ext.: 221 Telf.: 05-2636732',
-                    direccion: 'Lunes a Viernes: 07:00 - 23:00 horas, Sábado y <strong>Domingo</strong>: 07:00 - 17:00 horas'
+                    direccion: '<b>LU-VI:</b> 07:00 - 23:00 horas, <b>SA - DO:</b> 07:00 - 17:00 horas'
                 },
                 {
                     local: 'Sucursal Medical Plaza',
@@ -520,7 +520,7 @@ var myApp = new Framework7({
                     longitud: '-80.4621285',
                     zoom: '17',
                     telefono: ' 05-2638390',
-                    direccion: 'Lunes a Viernes: 07:00 - 12:00 horas y 14:00 - 17:00 horas, Sábado: 07:00 - 12:00 horas'
+                    direccion: '<b>LU-VI:</b> 07:00 - 12:00 horas y 14:00 - 17:00 horas, <b>SA:</b> 07:00 - 12:00 horas'
                 },
                 {
                     local: 'Sucursal Jorge Washington',
@@ -529,7 +529,7 @@ var myApp = new Framework7({
                     longitud: '-80.4670755',
                     zoom: '17',
                     telefono: '052932061',
-                    horario: 'Lunes a Viernes: 07:00 - 12:00 horas y 14:00 - 17:00 horas'
+                    horario: '<b>LU-VI:</b> 07:00 - 12:00 horas y 14:00 - 17:00 horas'
                 }
             ],
             manta:[
@@ -540,7 +540,7 @@ var myApp = new Framework7({
                     longitud: '-80.4621285',
                     zoom: '17',
                     telefono: '04-2594010 - Ext.: 241 Telf.: 05-2626058',
-                    direccion: 'Lunes a Viernes: 07:00 - 19:00 horas, Sábado: 07:00 - 17:00 horas, <strong>Domingo</strong>: 07:00 - 13:00 horas'
+                    direccion: '<b>LU-VI:</b> 07:00 - 19:00 horas, <b>SA:</b> 07:00 - 17:00 horas, <b>DO:</b> 07:00 - 13:00 horas'
                 },
                 {
                     local: 'Sucursal Jocay',
@@ -548,7 +548,7 @@ var myApp = new Framework7({
                     latitud: '-0.9685672',
                     longitud: '-80.7050085',
                     zoom: '16',
-                    telefono: 'Lunes a Viernes: 07:00 - 12:00 horas',
+                    telefono: '<b>LU-VI:</b> 07:00 - 12:00 horas',
                     horario: ''
                 }
             ],
@@ -560,7 +560,7 @@ var myApp = new Framework7({
                     longitud: '-79.9592789',
                     zoom: '14',
                     telefono: '04-2594010 - Ext.: 261 Telf.: 07-2984955',
-                    direccion: 'Lunes a Viernes: 07:00 - 00:00 horas, Sábado: 07:00 - 17:00 horas, <strong>Domingo:</strong> 07:00 - 15:00 horas'
+                    direccion: '<b>LU-VI:</b> 07:00 - 00:00 horas, <b>SA:</b> 07:00 - 17:00 horas, <b>DO:</b> 07:00 - 15:00 horas'
                 },
                 {
                     local: 'Sucursal Cdla. Bellavista',
@@ -569,7 +569,7 @@ var myApp = new Framework7({
                     longitud: '-79.9592789',
                     zoom: '14',
                     telefono: '7-2936887',
-                    horario: 'Lunes a Viernes: 07:00 - 18:00 horas, Sábados: 07:00 - 15:00 horas'
+                    horario: '<b>LU-VI:</b> 07:00 - 18:00 horas, <b>SA:</b> 07:00 - 15:00 horas'
                 }
 
             ],
@@ -581,7 +581,7 @@ var myApp = new Framework7({
                     longitud: '-79.475216',
                     zoom: '17',
                     telefono: '04-2594010 - Ext.: 301 Telf.: 05-2754543',
-                    direccion: 'Lunes a Viernes: 07:00 - 19:00 horas, Sábado: 07:00 - 15:00 horas, '
+                    direccion: '<b>LU-VI:</b> 07:00 - 19:00 horas, <b>SA:</b> 07:00 - 15:00 horas, '
                 }
             ]
         }          

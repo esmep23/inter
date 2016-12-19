@@ -9,48 +9,49 @@
 </div>
 <div class="pages">
   <div data-page="sucursales" class="page">
-    <div id="map" style="width:100%; height:45%; display: inline-flex;"></div>
-    <div class="page-content" style="height:55%; display: inline-flex; padding:0">
-      
-        <div class="list-block">
+    <div id="map" style=""></div>
+    <div id="pageSucursales" class="page-content">
+      <div class="list-block">
+        <!-- NORTE -->
+        <li class="accordion-item">
+          <a href="#norte" class="item-content item-link">
+            <div class="item-inner">
+              <div class="item-title">GYE - SECTOR NORTE</div>
+            </div>
+          </a>
+          <div class="accordion-item-content">
+            <div class="content-block">
+              <ul >
+                <strong>{{#each norte}}</strong>
+                <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">
+                <strong>{{local}}</strong><br/>
+                <i class="fa fa-map-marker" aria-hidden="true"></i> {{direccion}}<br/>
+                <i class="fa fa-phone" aria-hidden="true"></i> {{telefono}}<br/>
+                <i class="fa fa-clock-o" aria-hidden="true"></i> {{horario}}
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- NORTE -->
 
-          <ul>
-            <!-- NORTE -->
-            <li class="accordion-item"><a href="#norte" class="item-content item-link">
-                <div class="item-inner">
-                  <div class="item-title">GYE - SECTOR NORTE</div>
-                </div></a>
-              <div class="accordion-item-content">
-                <div class="content-block">
-                  <ul >{{#each norte}}
-                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
-                      <hr>
-                      {{direccion}}<br/>
-                      {{telefono}}<br/>
-                      {{horario}}</li>
-                      <br/>
-                  {{/each}}
-                  </ul>
-                  
-                </div>
-              </div>
-            </li>
-            <!-- NORTE -->
-            <!-- CENTRO -->
+        <!-- CENTRO -->
             <li class="accordion-item"><a href="#centro" class="item-content item-link">
                 <div class="item-inner">
                   <div class="item-title">GYE - SECTOR CENTRO</div>
                 </div></a>
               <div class="accordion-item-content">
                 <div class="content-block">
-                  <ul>{{#each centro}}
-                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
-                      <hr>
-                      <li>{{direccion}}</li>
-                      <li>{{telefono}}</li>
-                      <li>{{horario}}</li>
-                      <br/>
-                  {{/each}}
+                  <ul> 
+                    <strong>{{#each centro}}</strong>
+                    <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">
+                    <strong>{{local}}</strong><br/>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> {{direccion}}<br/>
+                    <i class="fa fa-phone" aria-hidden="true"></i> {{telefono}}<br/>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{horario}}
+                    </li>
+                    {{/each}}
                   </ul>
                   
                 </div>
@@ -64,15 +65,16 @@
                   <div class="item-title">GYE - SECTOR SUR</div>
                 </div></a>
               <div class="accordion-item-content">
-                <div class="content-block">
-                  <ul>{{#each sur}}
-                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
-                      <hr>
-                      <li>{{direccion}}</li>
-                      <li>{{telefono}}</li>
-                      <li>{{horario}}</li>
-                      <br/>
-                  {{/each}}
+                <div class="content-block">                  
+                  <ul> 
+                    <strong>{{#each sur}}</strong>
+                    <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">
+                    <strong>{{local}}</strong><br/>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> {{direccion}}<br/>
+                    <i class="fa fa-phone" aria-hidden="true"></i> {{telefono}}<br/>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{horario}}
+                    </li>
+                    {{/each}}
                   </ul>
                   
                 </div>
@@ -87,14 +89,15 @@
                 </div></a>
               <div class="accordion-item-content">
                 <div class="content-block">
-                  <ul>{{#each samborondon}}
-                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
-                      <hr>
-                      <li>{{direccion}}</li>
-                      <li>{{telefono}}</li>
-                      <li>{{horario}}</li>
-                      <br/>
-                  {{/each}}
+                  <ul> 
+                    <strong>{{#each samborondon}}</strong>
+                    <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">
+                    <strong>{{local}}</strong><br/>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> {{direccion}}<br/>
+                    <i class="fa fa-phone" aria-hidden="true"></i> {{telefono}}<br/>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{horario}}
+                    </li>
+                    {{/each}}
                   </ul>
                   
                 </div>
@@ -109,14 +112,15 @@
                 </div></a>
               <div class="accordion-item-content">
                 <div class="content-block">
-                  <ul>{{#each lajoya}}
-                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
-                      <hr>
-                      <li>{{direccion}}</li>
-                      <li>{{telefono}}</li>
-                      <li>{{horario}}</li>
-                      <br/>
-                  {{/each}}
+                  <ul> 
+                    <strong>{{#each lajoya}}</strong>
+                    <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">
+                    <strong>{{local}}</strong><br/>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> {{direccion}}<br/>
+                    <i class="fa fa-phone" aria-hidden="true"></i> {{telefono}}<br/>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{horario}}
+                    </li>
+                    {{/each}}
                   </ul>
                   
                 </div>
@@ -131,14 +135,16 @@
                 </div></a>
               <div class="accordion-item-content">
                 <div class="content-block">
-                  <ul>{{#each duran}}
-                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
-                      <hr>
-                      <li>{{direccion}}</li>
-                      <li>{{telefono}}</li>
-                      <li>{{horario}}</li>
-                      <br/>
-                  {{/each}}
+
+                  <ul> 
+                    <strong>{{#each duran}}</strong>
+                    <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">
+                    <strong>{{local}}</strong><br/>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> {{direccion}}<br/>
+                    <i class="fa fa-phone" aria-hidden="true"></i> {{telefono}}<br/>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{horario}}
+                    </li>
+                    {{/each}}
                   </ul>
                   
                 </div>
@@ -154,16 +160,17 @@
                 </div></a>
               <div class="accordion-item-content">
                 <div class="content-block">
-                  <ul>{{#each milagro}}
-                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
-                      <hr>
-                      <li>{{direccion}}</li>
-                      <li>{{telefono}}</li>
-                      <li>{{horario}}</li>
-                      <br/>
-                  {{/each}}
-                  </ul>
                   
+                  <ul> 
+                    <strong>{{#each milagro}}</strong>
+                    <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">
+                    <strong>{{local}}</strong><br/>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> {{direccion}}<br/>
+                    <i class="fa fa-phone" aria-hidden="true"></i> {{telefono}}<br/>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{horario}}
+                    </li>
+                    {{/each}}
+                  </ul>
                 </div>
               </div>
             </li>
@@ -177,14 +184,16 @@
                 </div></a>
               <div class="accordion-item-content">
                 <div class="content-block">
-                  <ul>{{#each portoviejo}}
-                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
-                      <hr>
-                      <li>{{direccion}}</li>
-                      <li>{{telefono}}</li>
-                      <li>{{horario}}</li>
-                      <br/>
-                  {{/each}}
+                  
+                  <ul> 
+                    <strong>{{#each portoviejo}}</strong>
+                    <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">
+                    <strong>{{local}}</strong><br/>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> {{direccion}}<br/>
+                    <i class="fa fa-phone" aria-hidden="true"></i> {{telefono}}<br/>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{horario}}
+                    </li>
+                    {{/each}}
                   </ul>
                   
                 </div>
@@ -200,14 +209,16 @@
                 </div></a>
               <div class="accordion-item-content">
                 <div class="content-block">
-                  <ul>{{#each manta}}
-                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
-                      <hr>
-                      <li>{{direccion}}</li>
-                      <li>{{telefono}}</li>
-                      <li>{{horario}}</li>
-                      <br/>
-                  {{/each}}
+                  
+                  <ul> 
+                    <strong>{{#each manta}}</strong>
+                    <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">
+                    <strong>{{local}}</strong><br/>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> {{direccion}}<br/>
+                    <i class="fa fa-phone" aria-hidden="true"></i> {{telefono}}<br/>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{horario}}
+                    </li>
+                    {{/each}}
                   </ul>
                   
                 </div>
@@ -222,14 +233,16 @@
                 </div></a>
               <div class="accordion-item-content">
                 <div class="content-block">
-                  <ul>{{#each machala}}
-                      <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{local}}
-                      <hr>
-                      <li>{{direccion}}</li>
-                      <li>{{telefono}}</li>
-                      <li>{{horario}}</li>
-                      <br/>
-                  {{/each}}
+                  
+                  <ul> 
+                    <strong>{{#each machala}}</strong>
+                    <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">
+                    <strong>{{local}}</strong><br/>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> {{direccion}}<br/>
+                    <i class="fa fa-phone" aria-hidden="true"></i> {{telefono}}<br/>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{horario}}
+                    </li>
+                    {{/each}}
                   </ul>
                   
                 </div>
@@ -244,14 +257,16 @@
                 </div></a>
               <div class="accordion-item-content">
                 <div class="content-block">
-                  <ul onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{direccion}} | {{telefono}} | {{horario}}')">{{#each quevedo}}
-                      <li>{{local}}</li>
-                      <hr>
-                      <li>{{direccion}}</li>
-                      <li>{{telefono}}</li>
-                      <li>{{horario}}</li>
-                      <br/>
-                  {{/each}}
+                  
+                  <ul> 
+                    <strong>{{#each quevedo}}</strong>
+                    <li onclick="mapa({{latitud}}, {{longitud}}, '{{local}}', '{{zoom}}', '{{direccion}} | {{telefono}} | {{horario}}')">
+                    <strong>{{local}}</strong><br/>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> {{direccion}}<br/>
+                    <i class="fa fa-phone" aria-hidden="true"></i> {{telefono}}<br/>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> {{horario}}
+                    </li>
+                    {{/each}}
                   </ul>
                   
                 </div>
@@ -259,13 +274,7 @@
             </li>
             <!-- QUEVEDO -->
 
-
-
-
-          </ul>
-        </div>
-
-
+      </div>
     </div>
   </div>
 </div>
