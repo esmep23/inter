@@ -260,6 +260,8 @@ PAGINA DE TALENTO HUMANO
 }
 #imagenNoticia{
   background-size: contain;
+  background-size: 100%;
+  background-position: center -10px;
 }
 #thumbnail_imagenNoticia{
   background-size: cover;
