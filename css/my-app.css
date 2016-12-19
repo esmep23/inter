@@ -196,3 +196,79 @@ PAGINA DE SUCURSALES
 #pageSucursales .list-block li{
   background-color: #eeeeee!important;
 }
+
+.medicos-principal,
+.item-media{
+  display: inline-block!important;
+}
+
+/*
+------------------------------------
+------------------
+PAGINA DE TALENTO HUMANO
+------------------
+------------------------------------
+*/
+#talentohumano.page-content{
+    margin-top: 8%;
+}
+#talentohumano li.row{
+  height: 120px;
+  border-bottom: 1px solid #333;
+}
+#talentohumano li.list-block .item-inner:after,
+#talentohumano .list-block .item-inner:after{
+  background-color: transparent!important;
+}
+#personal_principal .list-block li{
+  height: 100px;
+}
+#talentohumano ul li .item-inner{
+  width: 50%;
+  display: inline-block;
+}
+
+#talentohumano ul li .item-inner .item-subtitle{
+  font-size: small;
+  white-space: normal;
+}
+#talentohumano ul li .item-inner .item-title{
+  font-size: x-small;
+
+}
+#talentohumano ul li .item-media{
+  width: 50%;
+  display: inline-block;
+}
+#talentohumano ul li .item-inner.colaboradores{
+  width: 100%!important;
+}
+#talentohumano ul li .item-inner.colaboradores .item-title{
+  white-space: normal!important;
+}
+
+#imagenNoticia,
+#thumbnail_imagenNoticia{
+  width: 150px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #333;
+  min-height: 100px;
+  float: right;
+  background-color: white;
+}
+#imagenNoticia{
+  background-size: contain;
+}
+#thumbnail_imagenNoticia{
+  background-size: cover;
+  margin: 2%;
+}
+#inside_imagenNoticia{
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+  background-position: 0;
+  
+}
