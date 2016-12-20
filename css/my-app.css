@@ -60,9 +60,10 @@ FUENTES
 }
 
 .page{
+  width: 100%;
   background: #eeeeee!important;
   color: #333!important;
-  margin-top: 10%; 
+  padding-top: 10%; 
 }
 /*
 ------------------------------------
@@ -328,7 +329,8 @@ img.imgNoticia{
 }
 
 #noticias .list-block{
-  margin: 2%!important;
+  margin-top: 2%!important;
+  margin-bottom: 2%!important;
   background-color: white;
 }
 
