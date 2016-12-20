@@ -2,34 +2,69 @@
   <div class="navbar-inner">
     <div class="left sliding"><a href="#" class="link icon-only open-panel"><i class="f7-icons">bars</i></a></div>
     <div class="center sliding">COTIZACION</div>
-    <div class="right"></div>
+    <div class="right"><i class="fa fa-plus" aria-hidden="true"></i></div>
   </div>
 </div>
-<div class="pages">
-  <div data-page="cotizador" class="page">
-    <div class="page-content">
-      <div class="list-block">
-        <form class="searchbar searchbar-init" data-search-list=".list-block-search" data-search-in=".item-title" data-found=".searchbar-found" data-not-found=".searchbar-not-found">
-            <div class="searchbar-input">
-                <input type="search" placeholder="Search">
-                <a href="#" class="searchbar-clear"></a>
-            </div>
-            <a href="#" class="searchbar-cancel">Cancel</a>
-        </form>
-        
-        <div class="searchbar-overlay"></div>
-        <div id="total_examenes"></div>
-        <div class="page-content">
-            <div class="content-block searchbar-not-found">
-                    Nothing found
-            </div>
-     
-            <div id="examenes" class="list-block list-block-search searchbar-found">
-                <ul>
-                   
-                </ul>
-            </div>
-        </div>
+<div data-page="cotizador" class="page">
+  <!-- Search Bar -->
+  <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+    <div class="searchbar-input">
+      <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
+    </div><a href="#" class="searchbar-cancel">Cancel</a>
+  </form>
+ 
+  <!-- Search Bar overlay -->
+  <div class="searchbar-overlay"> 
+  <a href="#">A</a> |
+  <a href="#">B</a> |
+  <a href="#">C</a> <br/>
+  <a href="#">D</a> |
+  <a href="#">E</a> |
+  <a href="#">F</a> <br/>
+  <a href="#">G</a> |
+  <a href="#">H</a> |
+  <a href="#">I</a> <br/>
+  <a href="#">J</a> |
+  <a href="#">K</a> |
+  <a href="#">L</a> <br/>
+  <a href="#">M</a> |
+  <a href="#">N</a> |
+  <a href="#">O</a> <br/>
+  <a href="#">P</a> |
+  <a href="#">Q</a> |
+  <a href="#">R</a> <br/>
+  <a href="#">S</a> |
+  <a href="#">T</a> |
+  <a href="#">U</a> <br/>
+  <a href="#">V</a> |
+  <a href="#">W</a> |
+  <a href="#">X</a> <br/>
+  <a href="#">Y</a> |
+  <a href="#">Z</a> |
+  </div>
+ 
+  <div class="page-content">
+    <!-- This block will be displayed if nothing found -->
+    <div class="content-block searchbar-not-found">
+      <div class="content-block-inner">Nothing found</div>
+    </div>
+ 
+    <div class="seleccionados"></div>
+    <!-- Aqui esta el listado para la busqueda -->
+    <div class="list-block list-block-search searchbar-found">
+      <ul>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Acura </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Audi</div>
+          </div>
+        </li>
+        ...
+      </ul>
     </div>
   </div>
 </div>
