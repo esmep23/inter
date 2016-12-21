@@ -1,11 +1,13 @@
 
 *{
   margin: 0;
-  padding: 0
+  padding: 0;
+  font-size: small!important;
 }
 body,html{
   font-family: 'Open Sans', sans-serif!important;
   font-weight: 300;
+  font-size: small!important;
   color: #333!important;
 }
 
@@ -33,7 +35,7 @@ FUENTES
   font-family: 'Framework7 Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 25px;
+  /*font-size: 25px;*/
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
@@ -91,7 +93,7 @@ img.logoApp{
 
 .list-block .item-content{
   padding-left: 10px;
-  font-size: smaller;
+  /*font-size: smaller;*/
 }
 
 .list-block{
@@ -135,7 +137,18 @@ NAVBAR
   color: white!important;
 }
 
-
+.navbar a.link,
+.subnavbar a.link,
+.toolbar a.link{
+  width: 30px!important;
+  text-align: center!important;
+}
+.f7-icons{
+  font-size: large!important;
+}
+.back.link .f7-icons{
+    margin: 0 auto!important;
+}
 /*
 ------------------------------------
 ------------------
@@ -233,11 +246,11 @@ PAGINA DE TALENTO HUMANO
 }
 
 #talentohumano ul li .item-inner .item-subtitle{
-  font-size: small;
+  /*font-size: small;*/
   white-space: normal;
 }
 #talentohumano ul li .item-inner .item-title{
-  font-size: x-small;
+  /*font-size: x-small;*/
   white-space: normal;
 }
 #talentohumano ul li .item-media{
@@ -257,7 +270,7 @@ PAGINA DE TALENTO HUMANO
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  border: 1px solid #333;
+  border: 1px solid #eeeeee;
   min-height: 100px;
   float: right;
   background-color: white;
@@ -308,14 +321,14 @@ NOTICIAS
 .item-subtitle{
   font-weight: bolder;
   text-transform: uppercase;
-  font-size: small;
+  /*font-size: small;*/
 }
 
 .list-block .item-subtitle{
       white-space: normal;
       text-overflow: clip;
       padding-top: 4%;
-      font-size: x-small;
+      /*font-size: x-small;*/
 }
 
 img.imgNoticia{
@@ -329,7 +342,7 @@ img.imgNoticia{
 }
 .colaboradores p.item-title{
   padding: 0!important;
-  font-size: small;
+  /*font-size: small;*/
   white-space: normal;
   text-overflow: clip;
 }
@@ -357,7 +370,7 @@ h2.content-block-title{
 
 #fecha{
     text-transform: uppercase;
-    font-size: xx-small;
+    /*font-size: xx-small;*/
     position: absolute;
     bottom: 10%;
 }
