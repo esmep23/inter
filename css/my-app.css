@@ -63,7 +63,7 @@ FUENTES
   width: 100%;
   background: #eeeeee!important;
   color: #333!important;
-  padding-top: 10%; 
+  padding-top: 15%; 
 }
 /*
 ------------------------------------
@@ -108,7 +108,10 @@ img.logoApp{
   width: 100%;
   list-style: none!important;
 }
-
+.navbar:after,
+.navbar, .subnavbar, .toolbar{
+  background-color: transparent;
+}
 /*
 ------------------------------------
 ------------------
@@ -202,7 +205,10 @@ PAGINA DE SUCURSALES
 .item-media{
   display: inline-block!important;
 }
-
+#pageSucursales .list-block .accordion-item ul{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 /*
 ------------------------------------
 ------------------
@@ -221,7 +227,7 @@ PAGINA DE TALENTO HUMANO
 #personal_principal .list-block li{
   height: 100px;
 }
-#talentohumano ul li .item-inner{
+#talentohumano ul li .item-inner.colaboradores{
   width: 50%;
   display: inline-block;
 }
@@ -232,7 +238,7 @@ PAGINA DE TALENTO HUMANO
 }
 #talentohumano ul li .item-inner .item-title{
   font-size: x-small;
-
+  white-space: normal;
 }
 #talentohumano ul li .item-media{
   width: 50%;
@@ -341,6 +347,7 @@ img.imgNoticia{
 
 .noticia .content-block-title h2{
   font-weight: bolder;
+  white-space: normal!important;
 }
 
 h2.content-block-title{
