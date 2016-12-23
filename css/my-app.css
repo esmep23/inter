@@ -388,3 +388,42 @@ h3.titularColaborador{
 .content-block p{
   text-align: justify;
 }
+
+
+/*
+==========================================================================================================================
+COTIZADOR
+==========================================================================================================================
+*/
+.search-letter{
+  display: none;
+}
+
+.cargoLetra-a,
+.cargoLetra-b,
+.cargoLetra-c,
+.cargoLetra-d,
+.cargoLetra-e,
+.cargoLetra-f,
+.cargoLetra-g,
+.cargoLetra-h,
+.cargoLetra-i,
+.cargoLetra-j,
+.cargoLetra-k,
+.cargoLetra-l,
+.cargoLetra-m,
+.cargoLetra-n,
+.cargoLetra-o,
+.cargoLetra-p,
+.cargoLetra-q,
+.cargoLetra-r,
+.cargoLetra-s,
+.cargoLetra-t,
+.cargoLetra-u,
+.cargoLetra-v,
+.cargoLetra-w,
+.cargoLetra-x,
+.cargoLetra-y,
+.cargoLetra-z{
+  display: none;
+}

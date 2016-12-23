@@ -8,6 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>INTERLAB</title>
     <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7-indexed-list.css">
     <link rel="stylesheet" href="css/my-app.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,7 +27,7 @@
                       <div class="item-inner"> 
                         <div class="item-title menu"><span>CONSULTA DE EXAMENES</span></div>
                       </div></a></li>
-                  <li><a href="cotizador.html" class="item-link item-content">
+                  <li><a href="cotizador.html" data-context-name="cotizador"  class="item-link item-content">
                       <div class="item-inner"> 
                         <div class="item-title menu"><span>COTIZADOR</span></div>
                       </div></a></li>
@@ -122,8 +123,11 @@
 
       </div>
     </div>
-        <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
     <script src="js/jquery-3.1.1.js"></script>
+
+    <script type="text/javascript" src="js/framework7-indexed-list.js"></script>
+    
     <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
     <script type="text/javascript" src="js/my-app.js"></script>
     <script type="text/javascript" src="js/interlab.js"></script>

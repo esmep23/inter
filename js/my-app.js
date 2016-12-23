@@ -7,7 +7,6 @@ var total= 0;
 var $$ = Dom7;
 
 var myApp = new Framework7({
-    animatePages:false,
     precompileTemplates: false,
     template7Pages: true,
     template7Data: {

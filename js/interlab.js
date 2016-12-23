@@ -1,4 +1,6 @@
 
+var cotizacion = [];
+var total= 0;
 var url = "http://interlab.com.ec/wp-json/posts";
 $.ajax({
   url: url,
@@ -31,7 +33,7 @@ $.ajax({
   url: urlExamenes,
   dataType: "json",
   success: function (data, textStatus, jqXHR) { 
-    myApp.params.template7Data['examenes'] = data;
+    myApp.params.template7Data['cotizador'] = data;
   },
   error: function (jqXHR, textStatus, errorThrown) {
     console.log("error" + errorThrown)
@@ -49,6 +51,61 @@ console.log(myApp.template7Data);
 myApp.onPageBeforeInit('noticias', function (page) {
     myApp.closePanel();
 });
+
+/*
+************************************************************************************************************************************************
+*****COTIZADOR****************************************************************************************************************************
+************************************************************************************************************************************************
+*/
+myApp.onPageBeforeInit('cotizador', function (page) {
+    myApp.closePanel();
+
+    $(".agregar-examenes").click(function() {
+      $(".search-letter").css('display','block');
+    });
+
+    $(".close-letter").click(function() {
+      $(".search-letter").css('display','none');
+    });
+
+    $(document).on('change', '#cbox', function() {
+      var examen = $(this).val();
+      var cadena = examen.split("|");
+      //Agrego a mi listado
+      /*
+       --------------------------------
+       --------------------------------
+      */
+      if (this.checked){
+        //ID agregar a objeto
+        cotizacion.push(examen);
+        console.log(cotizacion);
+        actualizoMiLista();
+        //precio ir sumando
+        var precio = cadena[3];
+        total = Number(total) + Number(precio);
+        alert(total);
+      } else {
+      //Elimino de mi listado
+      /*
+        --------------------------------
+        --------------------------------
+      */
+        //ID agregar a objeto
+
+        //precio ir sumando
+        var precio = cadena[3];
+        total = Number(total) - Number(precio);
+        alert(total);
+      }
+
+    });
+
+   
+    
+
+});
+
 /*
 ************************************************************************************************************************************************
 *****TALENTO HUMANO*****************************************************************************************************************************
@@ -120,4 +177,31 @@ function mapa(latitud, longitud, ubicacion, zoom, infor){
       title: ubicacion,
       text: infor 
     });
+}
+
+
+function eliminodeMiLista(id){
+  $('.cargo_cotizador .cargoLetra .miLista').empty();
+      for (var ele in cotizacion) {
+        var lista = cotizacion[ele];
+        var exa = lista.split("|");
+        if(exa[1]  == id){
+          
+          cotizacion.splice(ele, 1);
+          $('.id-'+id).prop('checked', false);
+          console.log(ele);
+        }
+       
+      }
+          actualizoMiLista();
+}
+
+function actualizoMiLista(){
+  $('.cargo_cotizador .miLista').empty();
+  for (var ele in cotizacion) {
+    var lista = cotizacion[ele];
+    var exa = lista.split("|");
+    $('.cargoLetra-'+exa[0].toLowerCase()).css('display','block');
+    $('.cargo_cotizador .cargoLetra-'+exa[0].toLowerCase()+' .listado-'+exa[0].toLowerCase()).append('<li>'+exa[2]+'<div onclick="eliminodeMiLista('+exa[1]+')"><i class="fa fa-times" aria-hidden="true"></i></div></li>');
+  }
 }
