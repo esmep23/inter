@@ -28,7 +28,7 @@ $.ajax({
   }
 });
 
-var urlExamenes = "http://interlab.com.ec/facebook/cotizador/php/examenes.php";
+var urlExamenes = "http://interlab.com.ec/facebook/cotizador/php/examenes2.php";
 $.ajax({
   url: urlExamenes,
   dataType: "json",
@@ -60,12 +60,31 @@ myApp.onPageBeforeInit('noticias', function (page) {
 myApp.onPageBeforeInit('cotizador', function (page) {
     myApp.closePanel();
 
-    $(".agregar-examenes").click(function() {
+    /*$(".agregar-examenes").click(function() {
       $(".search-letter").css('display','block');
     });
 
     $(".close-letter").click(function() {
       $(".search-letter").css('display','none');
+    });*/
+
+    $(".letter").click(function() {
+      //alert($(this).text());
+      letra_buscar = $(this).text();
+      //oculto abecedario
+      myApp.closeModal('.popup-letras');
+      $(".examenes").css('display','block');
+      $(".item-content").css('display','none');
+      $(".pagina-cotizacion").css('display','none');
+      $(".letra-"+letra_buscar).css('display','block');
+    });
+
+    
+    $(".btnBuscador").click(function() {
+      myApp.closeModal('.popup-letras');
+      $(".examenes").css('display','block');
+      $(".pagina-cotizacion").css('display','none');
+      $(".item-content").css('display','block');
     });
 
     $(document).on('change', '#cbox', function() {
@@ -76,6 +95,8 @@ myApp.onPageBeforeInit('cotizador', function (page) {
        --------------------------------
        --------------------------------
       */
+      $(".pagina-cotizacion").css('display','block');
+
       if (this.checked){
         //ID agregar a objeto
         cotizacion.push(examen);
@@ -84,7 +105,8 @@ myApp.onPageBeforeInit('cotizador', function (page) {
         //precio ir sumando
         var precio = cadena[3];
         total = Number(total) + Number(precio);
-        alert(total);
+        $('.valor_de_Examenes').html('$'+total);
+        //alert(total);
       } else {
       //Elimino de mi listado
       /*
@@ -96,7 +118,8 @@ myApp.onPageBeforeInit('cotizador', function (page) {
         //precio ir sumando
         var precio = cadena[3];
         total = Number(total) - Number(precio);
-        alert(total);
+        $('.valor_de_Examenes').html('$'+total);
+        //alert(total);
       }
 
     });
@@ -106,6 +129,10 @@ myApp.onPageBeforeInit('cotizador', function (page) {
 
 });
 
+myApp.onPageInit('cotizador', function (page) {
+    actualizoMiLista();
+    $('.valor_de_Examenes').html('$'+total);
+});
 /*
 ************************************************************************************************************************************************
 *****TALENTO HUMANO*****************************************************************************************************************************
@@ -181,7 +208,7 @@ function mapa(latitud, longitud, ubicacion, zoom, infor){
 
 
 function eliminodeMiLista(id){
-  $('.cargo_cotizador .cargoLetra .miLista').empty();
+  $('.cargo_cotizador .miLista').empty();
       for (var ele in cotizacion) {
         var lista = cotizacion[ele];
         var exa = lista.split("|");
@@ -202,6 +229,8 @@ function actualizoMiLista(){
     var lista = cotizacion[ele];
     var exa = lista.split("|");
     $('.cargoLetra-'+exa[0].toLowerCase()).css('display','block');
-    $('.cargo_cotizador .cargoLetra-'+exa[0].toLowerCase()+' .listado-'+exa[0].toLowerCase()).append('<li>'+exa[2]+'<div onclick="eliminodeMiLista('+exa[1]+')"><i class="fa fa-times" aria-hidden="true"></i></div></li>');
+    $('.cargo_cotizador .cargoLetra-'+exa[0].toLowerCase()+' .listado-'+exa[0].toLowerCase()).append('<li class="item-content"><div class="item-inner"><div class="item-title">'+exa[2]+'</div><div class="item-after"><div onclick="eliminodeMiLista('+exa[1]+')"><i class="fa fa-times" aria-hidden="true"></i></div></div></div></li>'); 
   }
+  $(".examenes").css('display','none');
 }
+

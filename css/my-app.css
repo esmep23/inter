@@ -58,7 +58,7 @@ FUENTES
     background-color: rgba(0,0,0,0.5);
     height: 100%;
     position: absolute;
-    z-index: 9999;
+    /*z-index: 9999;*/
 }
 
 .page{
@@ -66,6 +66,10 @@ FUENTES
   background: #eeeeee!important;
   color: #333!important;
   padding-top: 12%; 
+}
+
+.right a{
+  color: white;
 }
 /*
 ------------------------------------
@@ -395,10 +399,66 @@ h3.titularColaborador{
 COTIZADOR
 ==========================================================================================================================
 */
-.search-letter{
+
+.popup-letras .letter{
+  color: #64676e;
+  width: 15.5%;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+}
+.popup-letras{
+  width:100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.9);
+  text-align: center;
+}
+.popup-letras form{
+  margin-bottom: 30px;
+}
+.popup-letras form input{
+  width: 90%;
+  border: 0;
+  background-color: transparent;
+}
+.btnBuscador{
+  display: inline-block;
+  text-align: right;
+}
+.valor_de_Examenes{
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: #999999;
+  color: white;
+}
+.cargo_cotizador{
+}
+.examenes{
+  position: absolute;
+  top: 0;
   display: none;
 }
+a.close-popup{
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  color: #999999!important;
+}
+/*
+#seccionCotizar{
+  position: relative;
+}
 
+.search-letter{
+
+}
+
+.examenes{
+  display: none;
+}
+*/
 .cargoLetra-a,
 .cargoLetra-b,
 .cargoLetra-c,
@@ -427,3 +487,11 @@ COTIZADOR
 .cargoLetra-z{
   display: none;
 }
+/*
+.cargo_cotizador{
+  display: block;
+}
+.cargo_cotizador .content-block-title{
+  font-weight: 700;
+}
+*/
