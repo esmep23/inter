@@ -191,6 +191,11 @@ a.color-teal {
   background: #018673!important;
 }
 
+#secretIFrame{
+  width: 100%;
+  height: 500px;
+}
+
 /*
 ------------------------------------
 ------------------

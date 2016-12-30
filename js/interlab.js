@@ -162,10 +162,31 @@ myApp.onPageBeforeInit('index', function (page) {
 
 
 
+
+
 });
 //Orden es 7777111 y la Clave 21099
     $( ".consultoPdf" ).click(function() {
       alert(0);
+
+      $("#secretIFrame").attr("src","http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099");
+
+      $("#secretIFrame").css('display','block');
+      $("#secretIFrame").css('visibility', 'visible');
+/*
+      $.ajax({
+        url: 'http://interlab.com.ec/app/movil/pdf.php',
+        type: "GET",
+        cache: true,
+        dataType: "json",
+        data: "arg0=7777111&arg1=21099",
+        success: function(response){
+          alert(1);
+        },
+        error : function(error){     
+          console.log(error);
+        }
+      });  */
 
 /*
 var settings = {
@@ -204,7 +225,7 @@ $.ajax(settings).done(function (response) {
   console.log(response);
 });
 
-  */    
+  */    /*
       $.ajax({
         type: "POST",
         url: 'http://181.39.15.91:8080/WsInterlab/rest/seguridad/obtenerResultadosPDF/',
@@ -226,9 +247,9 @@ $.ajax(settings).done(function (response) {
                   
                   return res.build();
         }
-      });
+      });*/
 
-      $.ajax({
+   /*   $.ajax({
             url: 'http://181.39.15.91:8080/WsInterlab/rest/seguridad/obtenerResultadosPDF/',
             method: 'post',
             crossDomain: true,
@@ -257,7 +278,7 @@ $.ajax(settings).done(function (response) {
             error: function(error){
                 console.log(error);
             }
-        });
+        });*/
     });
 
 /*
