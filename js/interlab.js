@@ -170,6 +170,7 @@ myApp.onPageBeforeInit('index', function (page) {
       alert(0);
       event.stopPropagation();
       window.open('http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099', '_blank', 'location=yes');
+      alert(1);
       
 /*
       $.ajax({
