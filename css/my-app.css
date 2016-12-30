@@ -58,7 +58,7 @@ FUENTES
     background-color: rgba(0,0,0,0.5);
     height: 100%;
     position: absolute;
-    /*z-index: 9999;*/
+    z-index: 9999;
 }
 
 .page{
@@ -439,7 +439,7 @@ COTIZADOR
   width: 30px;
   text-align: center;
 }
-
+/*
 input[type=checkbox]{
     display: none;
 }
@@ -459,7 +459,7 @@ input[type=checkbox]{
 input[type=checkbox]:checked + label{
   background-position: left -32px;
 }
-
+*/
 .examenes .item-after label{
  background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_d2a60beb8fb6bbb280642579049ebf65.png);
  

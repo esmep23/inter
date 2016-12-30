@@ -20,7 +20,7 @@
   ));
 
   header("Content-Type: application/pdf");
-  /*para descargar*/
+  /*para descargar
   header("Pragma: public");
   header("Expires: 0");
   header("Cache-Control: must-revalidate, post-check=0, pre-check=0"); 
@@ -29,7 +29,7 @@
   header("Content-Type: application/download");
   header("Content-Disposition: attachment;filename=resultado.pdf ");
   header("Content-Transfer-Encoding: binary ");
-  /* para descargar*/
+   para descargar*/
   $response = curl_exec($curl);
   $err = curl_error($curl);
 
