@@ -160,26 +160,99 @@ myApp.onPageBeforeInit('sucursales', function (page) {
 myApp.onPageBeforeInit('index', function (page) {
     myApp.closePanel();
 
+
+
+});
+//Orden es 7777111 y la Clave 21099
     $( ".consultoPdf" ).click(function() {
+      alert(0);
+
+/*
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://181.39.15.91:8080/WsInterlab/rest/seguridad/obtenerResultadosPDF/?arg0=7777111&arg1=21099",
+  "method": "POST",
+  "headers": {
+    "authorization": "'Authorization', 'Basic'"+ btoa("userinterlab" + ":" + "inter$18l@b"),
+    "cache-control": "no-cache",
+    "postman-token": true,
+    "Access-Control-Allow-Origin": "*"
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://181.39.15.91:8080/WsInterlab/rest/seguridad/obtenerResultadosPDF/?arg0=7777111&arg1=21099",
+  "method": "POST",
+  "headers": {
+    "authorization": "'Authorization', 'Basic'"+ btoa("userinterlab" + ":" + "inter$18l@b"),
+    "cache-control": "no-cache",
+    "postman-token": "61eca3d0-652e-8de7-d5d0-9bad513214c5",
+    "content-disposition": "attachment; filename='resultados.pdf'",
+    'access-control-allow-origin': '*',
+    'access-control-allow-methods': 'POST'
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+  */    
+      $.ajax({
+        type: "POST",
+        url: 'http://181.39.15.91:8080/WsInterlab/rest/seguridad/obtenerResultadosPDF/',
+        data: {
+          arg0 : "7777111",
+          arg1 : "21099"
+        },
+        header:{
+          "Content-Disposition": "attachment; filename='resultados.pdf'",
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST'
+        },
+        contentType: "application/json",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader ("Authorization", "Basic " + btoa("userinterlab" + ":" + "inter$18l@b"));
+        },
+        success: function(res, status, xhr){
+            xhr.getResponseHeader("Content-Disposition", "attachment; filename=resultados.pdf");
+                  
+                  return res.build();
+        }
+      });
 
       $.ajax({
             url: 'http://181.39.15.91:8080/WsInterlab/rest/seguridad/obtenerResultadosPDF/',
             method: 'post',
             crossDomain: true,
-            data: {
-                arg0 : $('#orden').val(),
-                arg1 : $('#clave').val()
+            params: {
+                
             },
             headers: {
-                "usuario": 'userinterlab', 
-                "clave": 'inter$18l@b',
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'POST'
             },
+            authorization:{
+                "type": "Basic Auth",
+                "usuario": 'userinterlab', 
+                "clave": 'inter$18l@b',
+            },
             dataType: 'json',
             success: function(res, status, xhr) { 
-                xhr.getResponseHeader("Content-Disposition", "attachment; filename=resultados.pdf");
-                return res.build();
+                alert(1);
+                
+                  
+                  xhr.getResponseHeader("Content-Disposition", "attachment; filename=resultados.pdf");
+                  
+                  return res.build();
+                
             },
             error: function(error){
                 console.log(error);
@@ -187,7 +260,6 @@ myApp.onPageBeforeInit('index', function (page) {
         });
     });
 
-});
 /*
 ************************************************************************************************************************************************
 *****FUNCION ADICIONAL MAPA*********************************************************************************************************************
@@ -229,7 +301,7 @@ function actualizoMiLista(){
     var lista = cotizacion[ele];
     var exa = lista.split("|");
     $('.cargoLetra-'+exa[0].toLowerCase()).css('display','block');
-    $('.cargo_cotizador .cargoLetra-'+exa[0].toLowerCase()+' .listado-'+exa[0].toLowerCase()).append('<li class="item-content"><div class="item-inner"><div class="item-title">'+exa[2]+'</div><div class="item-after"><div onclick="eliminodeMiLista('+exa[1]+')"><i class="fa fa-times" aria-hidden="true"></i></div></div></div></li>'); 
+    $('.cargo_cotizador .cargoLetra-'+exa[0].toLowerCase()+' .listado-'+exa[0].toLowerCase()).append('<li class="item-content"><div class="item-inner"><div class="item-title">'+exa[2]+'</div><div class="item-after">'+exa[3]+'<div onclick="eliminodeMiLista('+exa[1]+')"><i class="fa fa-times" aria-hidden="true"></i></div></div></div></li>'); 
   }
   $(".examenes").css('display','none');
 }

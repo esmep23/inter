@@ -12,7 +12,7 @@
        
         <div class="pagina-cotizacion">
             <div class="valor_de_Examenes">
-                $0
+                <span>$0</span>
             </div>
 
             <div class="cargo_cotizador">
@@ -159,7 +159,7 @@
                 <div class="item-title">
                    <label> {{nombre}}  </label>
                 </div>
-                <div class="item-after">{{valor}} <label><input type="checkbox" name="my-checkbox" id="cbox" class="id-{{id}}" value="{{letter}}|{{id}}|{{nombre}}|{{valor}}"></div>
+                <div class="item-after">{{valor}}<input type="checkbox" name="my-checkbox" id="cbox cbox-{{id}}" class="id-{{id}}" value="{{letter}}|{{id}}|{{nombre}}|{{valor}}"><label for="cbox-{{id}}"></label></div>
               </div>
             </li>
             {{/each}}

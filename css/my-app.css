@@ -79,8 +79,8 @@ MENU
 ------------------------------------
 */
 img.logoApp{
-  width: 45%;
-  margin-bottom: 10%;
+  width: 25%;
+  margin-bottom: 5%;
 }
 
 .panel{
@@ -118,6 +118,17 @@ img.logoApp{
 .navbar, .subnavbar, .toolbar{
   background-color: transparent;
 }
+
+.panel-menu .list-block .item-link .item-inner{
+  background-image: none!important;
+}
+.panel-menu .list-block li:first-child{
+  background-color: #018673!important;
+  color: white!important;
+}
+.menu span{
+  padding-left: 10px;
+}
 /*
 ------------------------------------
 ------------------
@@ -153,6 +164,11 @@ NAVBAR
 .back.link .f7-icons{
     margin: 0 auto!important;
 }
+
+.agregar-examenes{
+  width: 20px;
+  text-align: center;
+}
 /*
 ------------------------------------
 ------------------
@@ -162,7 +178,7 @@ PAGINA DE CONSULTA
 */
 .consultaLogo{
   width: 20%;
-  margin-bottom: 5%;
+  margin-bottom: 15%;
 }
 .buttons-row .button{
   border-radius: 0!important;
@@ -184,12 +200,12 @@ PAGINA DE SUCURSALES
 */
 #map{
   width:100%;
-  height:35%;
+  height:25%;
   display: inline-flex;
 }
 #pageSucursales{
   width: 100%;
-  height:65%;
+  height:75%;
   display: inline-flex;
   padding:0
 }
@@ -216,6 +232,7 @@ PAGINA DE SUCURSALES
 }
 #pageSucursales .list-block li{
   background-color: #eeeeee!important;
+  padding: 0 3%;
 }
 
 .medicos-principal,
@@ -256,6 +273,8 @@ PAGINA DE TALENTO HUMANO
 #talentohumano ul li .item-inner .item-title{
   /*font-size: x-small;*/
   white-space: normal;
+  font-weight: 300;
+  font-size: x-small!important;
 }
 #talentohumano ul li .item-media{
   width: 50%;
@@ -318,7 +337,7 @@ NOTICIAS
 #inside_imagenNoticia{
   background-size: cover;
   width: 100%;
-  height: 250px;
+  height: 150px;
   background-position: 0;
   
 }
@@ -365,13 +384,19 @@ img.imgNoticia{
 .noticia .content-block-title h2{
   font-weight: bolder;
   white-space: normal!important;
+  font-size: larger!important;
 }
 
 h2.content-block-title{
   white-space: normal!important;
 }
 
-
+.noticia .content-block{
+  margin: 2%;
+}
+#noticias{
+  padding: 2%;
+}
 #fecha{
     text-transform: uppercase;
     /*font-size: xx-small;*/
@@ -393,12 +418,47 @@ h3.titularColaborador{
   text-align: justify;
 }
 
+p.fecha{
+  color: #333;
+  font-size: xx-small!important;
+}
+
 
 /*
 ==========================================================================================================================
 COTIZADOR
 ==========================================================================================================================
 */
+
+.item-after div{
+  width: 30px;
+  text-align: center;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+
+ input[type=checkbox] + label{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    padding-left: 40px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + label{
+  background-position: left -32px;
+}
+
+.examenes .item-after label{
+ background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_d2a60beb8fb6bbb280642579049ebf65.png);
+ 
+}
 
 .popup-letras .letter{
   color: #64676e;
@@ -427,11 +487,14 @@ COTIZADOR
 }
 .valor_de_Examenes{
   width: 100%;
-  height: 100px;
-  line-height: 100px;
+  height: 150px;
+  line-height: 150px;
   text-align: center;
   background-color: #999999;
-  color: white;
+  font-size: 40px!important;
+  color: #666;
+  background-image: url('../imagenes/cotizador.jpg');
+  background-size: cover;
 }
 .cargo_cotizador{
 }
