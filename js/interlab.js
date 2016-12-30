@@ -168,11 +168,8 @@ myApp.onPageBeforeInit('index', function (page) {
 //Orden es 7777111 y la Clave 21099
     $( ".consultoPdf" ).click(function() {
       alert(0);
-
-      $("#secretIFrame").attr("src","http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099");
-
-      $("#secretIFrame").css('display','block');
-      $("#secretIFrame").css('visibility', 'visible');
+      window.open('http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099',"_blank")
+      
 /*
       $.ajax({
         url: 'http://interlab.com.ec/app/movil/pdf.php',
