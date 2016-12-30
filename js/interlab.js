@@ -169,8 +169,7 @@ myApp.onPageBeforeInit('index', function (page) {
     $( ".consultoPdf" ).click(function() {
       alert(0);
       //window.open('http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099',"_blank");
-      window.location.href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099";
-      
+      window.open('http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099', '_system');
 /*
       $.ajax({
         url: 'http://interlab.com.ec/app/movil/pdf.php',
