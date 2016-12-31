@@ -48,13 +48,4 @@ Epulgar
 		<icon src="imagenes/iconos/96x96.png" gap:platform="android" gap:density="xhdpi" />
 		<icon src="imagenes/iconos/144x144.png" gap:platform="android" gap:density="xxhdpi" />
 		<icon src="imagenes/iconos/192x192.png" gap:platform="android" gap:density="xxxhdpi" />
-		<gap:splash src="imagenes/splash/320x480.png" gap:platform="ios" width="320" height="480" />
-		<gap:splash src="imagenes/splash/640x960.png" gap:platform="ios" width="640" height="960" />
-		<gap:splash src="imagenes/splash/640x1136.png" gap:platform="ios" width="640" height="1136" />
-		<gap:splash src="imagenes/splash/240x400.png" gap:platform="android" gap:density="ldpi" />
-		<gap:splash src="imagenes/splash/320x480.png" gap:platform="android" gap:density="mdpi" />
-		<gap:splash src="imagenes/splash/480x800.png" gap:platform="android" gap:density="hdpi" />
-		<gap:splash src="imagenes/splash/720x960.png" gap:platform="android" gap:density="xhdpi" />
-		<gap:splash src="imagenes/splash/1080x1920.png" gap:platform="android" gap:density="xxhdpi" />
-		<gap:splash src="splash.png" />
 </widget>
