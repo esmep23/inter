@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget
-    id="ec.Keyframe.iiasa_suite"
+    id="com.interlab.noticias"
     version="1.1.69"
     versionCode="87"
     xmlns="http://www.w3.org/ns/widgets"
     xmlns:cdv="http://cordova.apache.org/ns/1.0">
 
-    <name>IIASA Suite</name>
+    <name>interlab</name>
     <description>
-        Aplicacion para vendedores de IIASA.
+        Aplicacion para INTERLAB.
     </description>
-    <author email="desarrollo@keyframe.ec" href="http://keyframe.ec">
-        Keyframe Ecuador
-    </author>
+   <author href="http://keyframe.com/" email="epulgar@keyframe.ec">
+Epulgar
+		</author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <preference name="AutoHideSplashScreen" value="true" />
