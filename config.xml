@@ -3,8 +3,7 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "com.interlab.noticias"
 		versionCode="1.0.1"
-		version   = "1"
-		xmlns="http://www.w3.org/ns/widgets">
+		version   = "1">
 		<name>interlab</name>
 		<description>
 		</description>
