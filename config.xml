@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget
-    id="ec.Keyframe.iiasa_suite"
+    id="com.interlab.noticias"
     version="1.1.69"
     versionCode="87"
     xmlns="http://www.w3.org/ns/widgets"
