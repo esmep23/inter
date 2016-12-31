@@ -14,17 +14,7 @@ Epulgar
 		</author>
 		<preference name="stay-in-webview" value="false" />
 
-		  <gap:plugin name="org.apache.cordova.inappbrowser" version="0.2.3" />
-		  <gap:plugin name="org.apache.cordova.dialogs" version="0.2.2" />
-		  <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.0.5" />
 
-		  <plugins>
-		    <plugin name="InAppBrowser" value="CDVInAppBrowser" />
-		  </plugins>
-
-		  <feature name="InAppBrowser">
-		    <param name="ios-package" value="CDVInAppBrowser" />
-		  </feature>
 
 
 		<content src="index.html" />
@@ -59,6 +49,7 @@ Epulgar
 		<preference name="LoadingDialog" value=","/> 
 		<preference name="LoadUrlTimeoutValue" value="20000" />
 		<preference name="disable-cursor" value="true" />
+
 		<gap:platform name="ios" />
 		<gap:platform name="android" />
 		<feature name="http://api.phonegap.com/1.0/media"/>
@@ -90,4 +81,16 @@ Epulgar
 		<access origin="*" />
 		<allow-intent href="http://*/*" />
     	<allow-intent href="https://*/*" />
+
+    	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.2.3" />
+		<gap:plugin name="org.apache.cordova.dialogs" version="0.2.2" />
+		 <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.0.5" />
+
+		  <plugins>
+		    <plugin name="InAppBrowser" value="CDVInAppBrowser" />
+		  </plugins>
+
+		  <feature name="InAppBrowser">
+		    <param name="ios-package" value="CDVInAppBrowser" />
+		  </feature>
 	</widget>
