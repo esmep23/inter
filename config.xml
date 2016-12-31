@@ -4,8 +4,7 @@
 		id        = "com.interlab.noticias"
 		versionCode="1.0.1"
 		version   = "1"
-		xmlns="http://www.w3.org/ns/widgets"
-    	xmlns:cdv="http://cordova.apache.org/ns/1.0">
+		xmlns="http://www.w3.org/ns/widgets">
 		<name>interlab</name>
 		<description>
 		</description>
