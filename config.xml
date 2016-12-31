@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget
+<widget xmlns = "http://www.w3.org/ns/widgets"
+	xmlns:gap = "http://phonegap.com/ns/1.0"
     id="com.interlab.noticias"
     version="1.1.0"
     versionCode="1">
