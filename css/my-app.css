@@ -65,7 +65,7 @@ FUENTES
   width: 100%;
   background: #eeeeee!important;
   color: #333!important;
-  padding-top: 12%; 
+  padding-top: 44px; 
 }
 
 .right a{
@@ -128,6 +128,10 @@ img.logoApp{
 }
 .menu span{
   padding-left: 10px;
+}
+
+.panel.panel-left.panel-cover{
+  z-index: 999999;
 }
 /*
 ------------------------------------
@@ -349,19 +353,17 @@ NOTICIAS
 .item-subtitle{
   font-weight: bolder;
   text-transform: uppercase;
-  /*font-size: small;*/
+
 }
 
 .list-block .item-subtitle{
       white-space: normal;
       text-overflow: clip;
       padding-top: 4%;
-      /*font-size: x-small;*/
 }
 
 img.imgNoticia{
-  display: block;/*
-  margin: auto;*/
+  display: block;
 }
 
 .colaboradores p.item-subtitle,
@@ -370,13 +372,11 @@ img.imgNoticia{
 }
 .colaboradores p.item-title{
   padding: 0!important;
-  /*font-size: small;*/
   white-space: normal;
   text-overflow: clip;
 }
 
 #noticias .list-block{
-  margin-top: 2%!important;
   margin-bottom: 2%!important;
   background-color: white;
 }
@@ -435,31 +435,23 @@ COTIZADOR
 ==========================================================================================================================
 */
 
+.popup-letras{
+  display: block;
+  margin-top: 44px!important;
+}
+.popup-23{
+  margin-top: 44px!important; 
+}
 .item-after div{
   width: 30px;
   text-align: center;
 }
-/*
-input[type=checkbox]{
-    display: none;
+
+.item-after input[type="checkbox"] {
+    width: 50px;
+    height: 19px;
 }
 
-
- input[type=checkbox] + label{
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    padding-left: 40px;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    line-height: 32px;
-    cursor: pointer;
-}
-
-input[type=checkbox]:checked + label{
-  background-position: left -32px;
-}
-*/
 .examenes .item-after label{
  background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_d2a60beb8fb6bbb280642579049ebf65.png);
  
@@ -504,9 +496,6 @@ input[type=checkbox]:checked + label{
 .cargo_cotizador{
 }
 .examenes{
-  position: absolute;
-  top: 0;
-  display: none;
 }
 a.close-popup{
   position: absolute;
@@ -514,19 +503,6 @@ a.close-popup{
   top: 10px;
   color: #999999!important;
 }
-/*
-#seccionCotizar{
-  position: relative;
-}
-
-.search-letter{
-
-}
-
-.examenes{
-  display: none;
-}
-*/
 .cargoLetra-a,
 .cargoLetra-b,
 .cargoLetra-c,
@@ -555,11 +531,3 @@ a.close-popup{
 .cargoLetra-z{
   display: none;
 }
-/*
-.cargo_cotizador{
-  display: block;
-}
-.cargo_cotizador .content-block-title{
-  font-weight: 700;
-}
-*/

@@ -602,11 +602,13 @@ var mainView = myApp.addView('.view-main', {
 
 $$('.panel-left').on('opened', function () {
     //myApp.alert('Left panel opened!');
-    $('.pageC').css('display', 'block');
+    //$('.pageC').css('display', 'block');
+    $('.popup-overlay').addClass('modal-overlay-visible');
 });
 $$('.panel-left').on('close', function () {
     //myApp.alert('Left panel is closing!');
-    $('.pageC').css('display', 'none');
+    //$('.pageC').css('display', 'none');
+    $('.popup-overlay').removeClass('modal-overlay-visible');
 });
 
 

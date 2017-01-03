@@ -151,7 +151,8 @@
         </div>
         <!-- -->
         
-        <div class="examenes list-block">
+        <!--<div class="examenes list-block">
+
           <ul>
             {{#each this}}
             <li class="item-content letra-{{letter}}">
@@ -159,12 +160,14 @@
                 <div class="item-title">
                    <label> {{nombre}}  </label>
                 </div>
-                <div class="item-after">{{valor}}<input type="checkbox" name="my-checkbox" id="cbox cbox-{{id}}" class="id-{{id}}" value="{{letter}}|{{id}}|{{nombre}}|{{valor}}"><label for="cbox-{{id}}"></label></div>
+                <div class="item-after"><span>{{valor}}</span><input type="checkbox" id="cbox cbox-{{id}}" class="id-{{id}}" value="{{letter}}|{{id}}|{{nombre}}|{{valor}}"></div>
               </div>
             </li>
             {{/each}}
           </ul>
-        </div>
+        </div>-->
+
+
 
 
         <!-- -->
@@ -172,5 +175,32 @@
     </div>
 
   
+
+       <div class="popup popup-23">
+           <div class="content-block">
+              
+           <a href="#" class="close-popup"><i class="fa fa-times" aria-hidden="true"></i></a>
+           <div class="page-content contacts-content">
+              <div class="examenes list-block contacts-block">
+                <div class="list-group">
+                  <ul>
+                    {{#each this}}
+                    <li class="{{letter}}">
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">{{nombre}}</div>
+                          <div class="item-after"><span>{{valor}}</span> <input type="checkbox" id="cbox" class="id-{{id}}" value="{{letter}}|{{id}}|{{nombre}}|{{valor}}"> </div>
+                        </div>
+                      </div>
+                    </li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+           </div>
+
+        </div>
   </div>
-</div>
+</div> 

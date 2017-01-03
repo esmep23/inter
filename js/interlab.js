@@ -40,6 +40,9 @@ $.ajax({
   }
 });
 
+    $('.popup-letras').on('popup:opened', function () {
+      alert('About Popup opened');
+    });
 
 console.log(myApp.template7Data);
 //mainView.router.load({pageName: 'noticias'});
@@ -69,22 +72,28 @@ myApp.onPageBeforeInit('cotizador', function (page) {
     });*/
 
     $(".letter").click(function() {
+
+      $(".examenes .list-group li").css('display', 'none');
+
       //alert($(this).text());
       letra_buscar = $(this).text();
       //oculto abecedario
       myApp.closeModal('.popup-letras');
-      $(".examenes").css('display','block');
-      $(".item-content").css('display','none');
-      $(".pagina-cotizacion").css('display','none');
-      $(".letra-"+letra_buscar).css('display','block');
+      myApp.popup('.popup-23');
+      $('.popup-overlay').removeClass('modal-overlay-visible');
+      
+      $(".examenes .list-group li."+letra_buscar).css('display','block');
     });
+
+
 
     
     $(".btnBuscador").click(function() {
       myApp.closeModal('.popup-letras');
-      $(".examenes").css('display','block');
-      $(".pagina-cotizacion").css('display','none');
-      $(".item-content").css('display','block');
+      myApp.popup('.popup-23');
+      $('.popup-overlay').removeClass('modal-overlay-visible');
+      $(".examenes .list-group li").css('display', 'block');
+      
     });
 
     $(document).on('change', '#cbox', function() {
@@ -164,7 +173,7 @@ myApp.onPageBeforeInit('index', function (page) {
 
 
 
-});
+
 //Orden es 7777111 y la Clave 21099
     $( ".consultoPdf" ).click(function() {
       alert(0);
@@ -280,6 +289,8 @@ $.ajax(settings).done(function (response) {
         });*/
     });
 
+});
+
 /*
 ************************************************************************************************************************************************
 *****FUNCION ADICIONAL MAPA*********************************************************************************************************************
@@ -323,6 +334,6 @@ function actualizoMiLista(){
     $('.cargoLetra-'+exa[0].toLowerCase()).css('display','block');
     $('.cargo_cotizador .cargoLetra-'+exa[0].toLowerCase()+' .listado-'+exa[0].toLowerCase()).append('<li class="item-content"><div class="item-inner"><div class="item-title">'+exa[2]+'</div><div class="item-after">'+exa[3]+'<div onclick="eliminodeMiLista('+exa[1]+')"><i class="fa fa-times" aria-hidden="true"></i></div></div></div></li>'); 
   }
-  $(".examenes").css('display','none');
+  //$(".examenes").css('display','none');
 }
 
