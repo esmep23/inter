@@ -81,8 +81,14 @@ myApp.onPageBeforeInit('cotizador', function (page) {
       myApp.closeModal('.popup-letras');
       myApp.popup('.popup-23');
       $('.popup-overlay').removeClass('modal-overlay-visible');
-      
-      $(".examenes .list-group li."+letra_buscar).css('display','block');
+
+      var exist = $( ".examenes .list-group li" ).hasClass( letra_buscar);
+      if(exist == false){
+         $(".no-hay-letras").css('display','block');
+      }else{
+        $(".examenes .list-group li."+letra_buscar).css('display','block');
+        $(".no-hay-letras").css('display','none');
+      }
     });
 
 

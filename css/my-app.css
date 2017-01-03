@@ -191,7 +191,7 @@ PAGINA DE CONSULTA
   padding: 0;
   margin: 0;
 }
-a.color-teal {
+.color-teal {
   background: #018673!important;
 }
 
@@ -457,6 +457,9 @@ COTIZADOR
  
 }
 
+.no-hay-letras{
+  display: none;
+}
 .popup-letras .letter{
   color: #64676e;
   width: 15.5%;
