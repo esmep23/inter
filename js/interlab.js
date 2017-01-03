@@ -138,6 +138,19 @@ myApp.onPageBeforeInit('cotizador', function (page) {
 
 });
 
+//CLICK ANALIZO LA BUSQUEDA DE PDF
+$( "#consultoPdf" ).click(function() {
+      arg0 = $('#orden').val();
+      arg1 = $('#clave').val();
+      if(( arg0 ) && (arg1)){
+        console.log(arg0 + '  -  ' +arg1);
+        window.location = "http://interlab.com.ec/app/movil/pdf.php?arg0="+arg0+"&arg1="+arg1;
+      }else{
+        myApp.alert("Ingrese parametros correctos", "INTERLAB");
+      }
+
+});
+//
 myApp.onPageInit('cotizador', function (page) {
     actualizoMiLista();
     $('.valor_de_Examenes').html('$'+total);
@@ -169,126 +182,7 @@ myApp.onPageBeforeInit('sucursales', function (page) {
 myApp.onPageBeforeInit('index', function (page) {
     myApp.closePanel();
 
-
-
-
-
-
 //Orden es 7777111 y la Clave 21099
-    $( ".consultoPdf" ).click(function() {
-      alert(0);
-      event.stopPropagation();
-      window.open('http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099', '_blank', 'location=yes');
-      alert(1);
-      
-/*
-      $.ajax({
-        url: 'http://interlab.com.ec/app/movil/pdf.php',
-        type: "GET",
-        cache: true,
-        dataType: "json",
-        data: "arg0=7777111&arg1=21099",
-        success: function(response){
-          alert(1);
-        },
-        error : function(error){     
-          console.log(error);
-        }
-      });  */
-
-/*
-var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "http://181.39.15.91:8080/WsInterlab/rest/seguridad/obtenerResultadosPDF/?arg0=7777111&arg1=21099",
-  "method": "POST",
-  "headers": {
-    "authorization": "'Authorization', 'Basic'"+ btoa("userinterlab" + ":" + "inter$18l@b"),
-    "cache-control": "no-cache",
-    "postman-token": true,
-    "Access-Control-Allow-Origin": "*"
-  }
-}
-
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
-
-var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "http://181.39.15.91:8080/WsInterlab/rest/seguridad/obtenerResultadosPDF/?arg0=7777111&arg1=21099",
-  "method": "POST",
-  "headers": {
-    "authorization": "'Authorization', 'Basic'"+ btoa("userinterlab" + ":" + "inter$18l@b"),
-    "cache-control": "no-cache",
-    "postman-token": "61eca3d0-652e-8de7-d5d0-9bad513214c5",
-    "content-disposition": "attachment; filename='resultados.pdf'",
-    'access-control-allow-origin': '*',
-    'access-control-allow-methods': 'POST'
-  }
-}
-
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
-
-  */    /*
-      $.ajax({
-        type: "POST",
-        url: 'http://181.39.15.91:8080/WsInterlab/rest/seguridad/obtenerResultadosPDF/',
-        data: {
-          arg0 : "7777111",
-          arg1 : "21099"
-        },
-        header:{
-          "Content-Disposition": "attachment; filename='resultados.pdf'",
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'POST'
-        },
-        contentType: "application/json",
-        beforeSend: function (xhr) {
-            xhr.setRequestHeader ("Authorization", "Basic " + btoa("userinterlab" + ":" + "inter$18l@b"));
-        },
-        success: function(res, status, xhr){
-            xhr.getResponseHeader("Content-Disposition", "attachment; filename=resultados.pdf");
-                  
-                  return res.build();
-        }
-      });*/
-
-   /*   $.ajax({
-            url: 'http://181.39.15.91:8080/WsInterlab/rest/seguridad/obtenerResultadosPDF/',
-            method: 'post',
-            crossDomain: true,
-            params: {
-                
-            },
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'POST'
-            },
-            authorization:{
-                "type": "Basic Auth",
-                "usuario": 'userinterlab', 
-                "clave": 'inter$18l@b',
-            },
-            dataType: 'json',
-            success: function(res, status, xhr) { 
-                alert(1);
-                
-                  
-                  xhr.getResponseHeader("Content-Disposition", "attachment; filename=resultados.pdf");
-                  
-                  return res.build();
-                
-            },
-            error: function(error){
-                console.log(error);
-            }
-        });*/
-    });
-
 });
 
 /*
