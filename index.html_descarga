@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-
   </head>
   <body>
     <div class="statusbar-overlay"></div>
@@ -106,29 +105,11 @@
 
                               </ul>
                               <div class="buttons-row">
-                                      <a href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" class="external">CONSULTAR</a>
-                                      <!--<div id="consultoPdf" class="external button button-raised button-fill color-teal">CONSULTAR</div>-->
-                                      <!--<a href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" class="external button button-raised button-fill color-teal" target="_blank">CONSULTAR</a>-->
+                                      <!--<a href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" class="button button-raised button-fill color-teal consultoPdf">CONSULTAR</a>-->
+                                      <a href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" class="external button button-raised button-fill color-teal">CONSULTAR</a>
                               </div>
                           
                           </div>
-
-<!--<a href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" class="external">LINK PRINCIPAL</a> funcionaba-->
-                          <!--<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-                          <a href="#" class="external" onclick="clickUri('http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099'); return false;">LINK</a>
-                          <br/>
-                          <br/>
-                          <br/>
-                          <br/>
-                          <object data="resultado.pdf" type="application/pdf" style="width:100%;height:100%"></object>
-                          <object href="resultado.pdf" type="application/pdf" style="width:100%;height:100%"></object>
-                          <iframe src="resultado.pdf" style="width:100%; height: 1100px;"></iframe>
-                          <iframe src="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" style="width:100%; height: 1100px;"></iframe>
-                          -->
 
                   </div>
               </div>
@@ -198,7 +179,6 @@
     
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YAqeEFMu0ohvdr8h2Z6jhJW17pQSeII&sensor=false"></script>
     <script type="text/javascript" src="js/jquery.googlemap.min.js"></script>
-    <div class="popup-overlay"></div>
 
    </body>
 </html>
