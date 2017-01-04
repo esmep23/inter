@@ -187,35 +187,18 @@
 
     <!-- -->
 
-    <!--<script type="text/javascript" src="js/framework7.min.js"></script>-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
     <script src="js/jquery-3.1.1.js"></script>
 
     <!--<script type="text/javascript" src="js/framework7-indexed-list.js"></script>-->
     
-    <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
     <script type="text/javascript" src="js/my-app.js"></script>
-    <script type="text/javascript" src="js/interlab.js"></script>-->
+    <script type="text/javascript" src="js/interlab.js"></script>
     
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YAqeEFMu0ohvdr8h2Z6jhJW17pQSeII&sensor=false"></script>
     <script type="text/javascript" src="js/jquery.googlemap.min.js"></script>
     <div class="popup-overlay"></div>
 
-    <script type="text/javascript">
-      
-      $( "#consultoPdf" ).click(function() {
-        alert(1);
-            arg0 = $('#orden').val();
-            arg1 = $('#clave').val();
-            if(( arg0 ) && (arg1)){
-              alert(arg0 + '  -  ' +arg1);
-              cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0="+arg0+"&arg1="+arg1, '_blank', 'location=yes');
-            }else{
-              alert("Ingrese parametros correctos", "INTERLAB");
-            }
-
-
-      });
-
-    </script>
    </body>
 </html>

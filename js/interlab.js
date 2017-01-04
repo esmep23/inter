@@ -1,4 +1,10 @@
 
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    window.open = cordova.InAppBrowser.open;
+}
+
+
 var cotizacion = [];
 var total= 0;
 var url = "http://interlab.com.ec/wp-json/posts";
@@ -145,16 +151,32 @@ myApp.onPageBeforeInit('cotizador', function (page) {
 
 });
 
+var inAppBrowserRef;
+
 //CLICK ANALIZO LA BUSQUEDA DE PDF
 $( "#consultoPdf" ).click(function() {
-      arg0 = $('#orden').val();
-      arg1 = $('#clave').val();
-      if(( arg0 ) && (arg1)){
-        console.log(arg0 + '  -  ' +arg1);
-        window.location = "http://interlab.com.ec/app/movil/pdf.php?arg0="+arg0+"&arg1="+arg1;
-      }else{
-        myApp.alert("Ingrese parametros correctos", "INTERLAB");
-      }
+      alert(1);
+            arg0 = $('#orden').val();
+            arg1 = $('#clave').val();
+            if(( arg0 ) && (arg1)){
+              alert(arg0 + '  -  ' +arg1);
+              inAppBrowserRef = cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0="+arg0+"&arg1="+arg1, '_blank', 'location=yes');
+
+              inAppBrowserRef.addEventListener('loadstart', function(){
+                alert('loadstart');
+              });
+ 
+              inAppBrowserRef.addEventListener('loadstop', function(){
+                alert('loadstop');
+              });
+           
+              inAppBrowserRef.addEventListener('loaderror', function(){
+                alert('loaderror');
+              });
+
+            }else{
+              alert("Ingrese parametros correctos", "INTERLAB");
+            }
 
 
 });
