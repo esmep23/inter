@@ -45,21 +45,24 @@ $.ajax({
     });
 
 $("#consultoPdf").on("click",function(e){
-           var clicked = $(e.target);
-         if(clicked.is('a, a *'))
-       {
-             clicked = clicked.closest("a");
-             var link = clicked.attr("href");
-            if(link.indexOf("https://") !== -1)
-           {
-               if(true) //use to be able to determine browser from app
-                 {
-                    link = "http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099&embedded=true";
-             }
-
-                 window.open(link, "_blank", "location=no,toolbar=no,hardwareback=yes");
-                return false;
-            }
+  alert(1);
+    var clicked = $(e.target);
+    if(clicked.is('a, a *'))
+    {
+      alert(2);
+      clicked = clicked.closest("a");
+      var link = clicked.attr("href");
+        if(link.indexOf("https://") !== -1)
+        {
+          alert(3);
+          if(true) //use to be able to determine browser from app
+          {
+            link = "http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099&embedded=true";
+          }
+          alert(4);
+          window.open(link, "_blank", "location=no,toolbar=no,hardwareback=yes");
+          return false;
+        }
     }
   });
 console.log(myApp.template7Data);
