@@ -203,10 +203,13 @@
     <script type="text/javascript">
       
       $( "#consultoPdf" ).click(function() {
+        alert(1);
             arg0 = $('#orden').val();
             arg1 = $('#clave').val();
+            alert(arg0);
+            alert(arg1);
             if(( arg0 ) && (arg1)){
-              console.log(arg0 + '  -  ' +arg1);
+              alert(arg0 + '  -  ' +arg1);
               window.location = "http://interlab.com.ec/app/movil/pdf.php?arg0="+arg0+"&arg1="+arg1;
             }else{
               alert("Ingrese parametros correctos", "INTERLAB");
