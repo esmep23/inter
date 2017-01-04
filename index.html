@@ -106,8 +106,8 @@
 
                               </ul>
                               <div class="buttons-row">
-                                      <a href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" id="consultoPdf" class="external button button-raised button-fill color-teal">CONSULTAR</a>
-                                      <!--<div id="consultoPdf" class="external button button-raised button-fill color-teal">CONSULTAR</div>-->
+                                      <!--<a href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" id="consultoPdf" class="external button button-raised button-fill color-teal">CONSULTAR</a>-->
+                                      <div id="consultoPdf" class="external button button-raised button-fill color-teal">CONSULTAR</div>
                                       <!--<a href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" class="external button button-raised button-fill color-teal" target="_blank">CONSULTAR</a>-->
                               </div>
                           
@@ -129,6 +129,7 @@
                           <iframe src="resultado.pdf" style="width:100%; height: 1100px;"></iframe>
                           <iframe src="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" style="width:100%; height: 1100px;"></iframe>
                           -->
+
                   </div>
               </div>
 
@@ -186,17 +187,34 @@
 
     <!-- -->
 
-    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!--<script type="text/javascript" src="js/framework7.min.js"></script>-->
     <script src="js/jquery-3.1.1.js"></script>
 
-    <script type="text/javascript" src="js/framework7-indexed-list.js"></script>
+    <!--<script type="text/javascript" src="js/framework7-indexed-list.js"></script>-->
     
-    <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+    <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
-    <script type="text/javascript" src="js/interlab.js"></script>
+    <script type="text/javascript" src="js/interlab.js"></script>-->
     
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YAqeEFMu0ohvdr8h2Z6jhJW17pQSeII&sensor=false"></script>
     <script type="text/javascript" src="js/jquery.googlemap.min.js"></script>
     <div class="popup-overlay"></div>
+
+    <script type="text/javascript">
+      
+      $( "#consultoPdf" ).click(function() {
+            arg0 = $('#orden').val();
+            arg1 = $('#clave').val();
+            if(( arg0 ) && (arg1)){
+              console.log(arg0 + '  -  ' +arg1);
+              window.location = "http://interlab.com.ec/app/movil/pdf.php?arg0="+arg0+"&arg1="+arg1;
+            }else{
+              alert("Ingrese parametros correctos", "INTERLAB");
+            }
+
+
+      });
+
+    </script>
    </body>
 </html>
