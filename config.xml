@@ -13,7 +13,7 @@ Epulgar
     <feature name="http://api.phonegap.com/1.0/device" />
 
 
-    <preference name="phonegap-version" value="3.1.0" />
+    <preference name="phonegap-version" value="cli-6.3.0" />
     <preference name="orientation"      value="portrait" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
@@ -41,6 +41,8 @@ Epulgar
 	<gap:splash src="imagenes/splash/720x960.png" gap:platform="android" gap:density="xhdpi" />
 	<gap:splash src="imagenes/splash/1080x1920.png" gap:platform="android" gap:density="xxhdpi" />
 	<gap:splash src="splash.png" />
+
+	<access origin="*" />
 
 	<content src="index.html" />
 </widget>
