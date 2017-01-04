@@ -153,8 +153,8 @@ var inAppBrowserRef;
             arg1 = $('#clave').val();
             if(( arg0 ) && (arg1)){
               alert(arg0 + '  -  ' +arg1);
-              cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0="+arg0+"&arg1="+arg1, '_blank', 'location=yes');
-
+              //cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0="+arg0+"&arg1="+arg1, '_blank', 'location=yes');
+              cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099", '_blank', 'location=yes');
             }else{
               alert("Ingrese parametros correctos", "INTERLAB");
             }
