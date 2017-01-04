@@ -210,7 +210,8 @@
             alert(arg1);
             if(( arg0 ) && (arg1)){
               alert(arg0 + '  -  ' +arg1);
-              window.location = "http://interlab.com.ec/app/movil/pdf.php?arg0="+arg0+"&arg1="+arg1;
+              window.open("http://interlab.com.ec/app/movil/pdf.php?arg0="+arg0+"&arg1="+arg1,"_blank");
+              
             }else{
               alert("Ingrese parametros correctos", "INTERLAB");
             }
