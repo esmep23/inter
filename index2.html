@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>INTERLAB</title>
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7-indexed-list.css">
+    <link rel="stylesheet" href="css/my-app.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  </head>
+  <body>
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-cover">
+      <div class="content-block panel-menu">
+        <a href="#"><img src="imagenes/logo.png" class="logoApp" /></a>
+        <div class="list-block">
+                <ul>
+                  <li><a href="index.html" class="item-link">
+                      <div class="item-inner"> 
+                        <div class="item-title menu"><span>CONSULTA DE EXÁMENES</span></div>
+                      </div></a></li>
+                  <li><a href="cotizador.html" data-context-name="cotizador"  class="item-link">
+                      <div class="item-inner"> 
+                        <div class="item-title menu"><span>COTIZADOR</span></div>
+                      </div></a></li>
+                  <li><a href="sucursales.html" data-context-name="sucursales" class="item-link">
+                      <div class="item-inner">
+                        <div class="item-title menu"><span>SUCURSALES</span></div>
+                      </div></a></li>
+                  <li><a href="noticias.html" data-context-name="noticias" class="item-link">
+                      <div class="item-inner">
+                        <div class="item-title menu"><span>NOTICIAS</span></div>
+                      </div></a></li>
+                  <!--<li><a href="cars.html" data-context-name="cars" class="item-link">
+                      <div class="item-inner">
+                        <div class="item-title">CARS</div>
+                      </div></a></li>-->
+                  <li><a href="talentohumano.html" data-context-name="talentohumano" class="item-link">
+                      <div class="item-inner"> 
+                        <div class="item-title menu"><span>TALENTO HUMANO</span></div>
+                      </div></a></li>
+                </ul>
+              </div>
+      </div>
+    </div>
+    <div class="panel panel-right panel-reveal">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <div class="views">
+      <div class="pageC"></div>
+      <div class="view view-main">
+        
+
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left sliding"><a href="#" class="link icon-only open-panel"><i class="f7-icons">bars</i></a></div>
+              <div class="center sliding">CONSULTA DE EXÁMENES</div>
+              <div class="right"></div>
+            </div>
+          </div>
+
+
+          <div class="pages">
+            <div data-page="index" class="page">
+              <div class="page-content">
+                   <div class="content-block">
+
+                          <center><img src="imagenes/logo.png" class="consultaLogo" /></center>
+                          <div class="list-block">
+
+                          
+                              <ul>
+                                  <li>
+                                    <div class="item-content">
+                                      <!--<div class="item-media"><i class="icon f7-icons">No. Orden</i></div>-->
+                                      <div class="item-inner">
+                                        <div class="item-title label">No. orden</div>
+                                        <div class="item-input">
+                                          <input type="text" name="arg0" id="orden" placeholder="______">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="item-content">
+                                      <!--<div class="item-media"><i class="icon f7-icons">unlock</i></div>-->
+                                      <div class="item-inner">
+                                        <div class="item-title label">Clave</div>
+                                        <div class="item-input">
+                                          <input type="text" name="arg1" id="clave" placeholder="______">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                              </ul>
+                              <div class="buttons-row">
+                                      <a href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" class="external">CONSULTAR</a>
+                                      <!--<div id="consultoPdf" class="external button button-raised button-fill color-teal">CONSULTAR</div>-->
+                                      <!--<a href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" class="external button button-raised button-fill color-teal" target="_blank">CONSULTAR</a>-->
+                              </div>
+                          
+                          </div>
+
+<!--<a href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" class="external">LINK PRINCIPAL</a> funcionaba-->
+                          <!--<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+                          <a href="#" class="external" onclick="clickUri('http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099'); return false;">LINK</a>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <object data="resultado.pdf" type="application/pdf" style="width:100%;height:100%"></object>
+                          <object href="resultado.pdf" type="application/pdf" style="width:100%;height:100%"></object>
+                          <iframe src="resultado.pdf" style="width:100%; height: 1100px;"></iframe>
+                          <iframe src="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" style="width:100%; height: 1100px;"></iframe>
+                          -->
+
+                  </div>
+              </div>
+
+              </div>
+          </div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+
+      <!-- -->
+    <div class="popup popup-letras">
+       <div class="content-block">
+          
+          <a href="#" class="close-popup"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <form>
+                <input type="text" name="buscador" placeholder="Buscar Exámen...">
+                <div class="btnBuscador"><i class="fa fa-search" aria-hidden="true"></i></div>
+
+            </form>
+            <div class="letter">A</div>
+            <div class="letter">B</div>
+            <div class="letter">C</div>
+            <div class="letter">D</div>
+            <div class="letter">E</div>
+            <div class="letter">F</div><br/>
+            <div class="letter">G</div>
+            <div class="letter">H</div>
+            <div class="letter">I</div>
+            <div class="letter">J</div>
+            <div class="letter">K</div>
+            <div class="letter">L</div><br/>
+            <div class="letter">M</div>
+            <div class="letter">N</div>
+            <div class="letter">O</div>
+            <div class="letter">P</div>
+            <div class="letter">Q</div>
+            <div class="letter">R</div><br/>
+            <div class="letter">S</div>
+            <div class="letter">T</div>
+            <div class="letter">U</div>
+            <div class="letter">V</div>
+            <div class="letter">W</div>
+            <div class="letter">X</div><br/>
+            <div class="letter">Y</div>
+            <div class="letter">Z</div>
+       </div>
+    </div>
+
+    <!-- -->
+
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script src="js/jquery-3.1.1.js"></script>
+
+    <script type="text/javascript" src="js/framework7-indexed-list.js"></script>
+    
+    <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/interlab.js"></script>
+    
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YAqeEFMu0ohvdr8h2Z6jhJW17pQSeII&sensor=false"></script>
+    <script type="text/javascript" src="js/jquery.googlemap.min.js"></script>
+    <div class="popup-overlay"></div>
+
+   </body>
+</html>
