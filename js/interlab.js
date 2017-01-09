@@ -1,7 +1,3 @@
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    alert("window.open works well");
-}
 var cotizacion = [];
 var total= 0;
 var url = "http://interlab.com.ec/wp-json/posts";
@@ -51,8 +47,8 @@ var inAppBrowserRef;
             arg1 = $('#clave').val();
             if(( arg0 ) && (arg1)){
               construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
-              alert(construURL);
               cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
+              
               //cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099", '_blank', 'location=yes');
             }else{
               myApp.alert("Ingrese parametros correctos", "INTERLAB");
