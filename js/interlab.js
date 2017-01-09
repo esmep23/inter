@@ -1,3 +1,7 @@
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    alert("window.open works well");
+}
 var cotizacion = [];
 var total= 0;
 var url = "http://interlab.com.ec/wp-json/posts";
