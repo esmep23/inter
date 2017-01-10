@@ -12,6 +12,13 @@ $( document ).ready(function() {
     });
 });
 
+$(document).on('click', '.popup-link', function (e){
+    e.preventDefault();
+    $.get($(this).attr('href'), function (content){
+        myApp.popup('<div class="popup">' + content + '</div>');
+    });
+});
+
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
