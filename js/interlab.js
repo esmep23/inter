@@ -82,7 +82,7 @@ $( "#consultoPdf" ).click(function() {
           //2621709
           //21099
           construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
-          cordova.InAppBrowser.open(construURL, '_system', 'location=yes');
+          cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
           //cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099", '_blank', 'location=yes');
         
       }else{
@@ -102,6 +102,32 @@ $( "#consultoPdf" ).click(function() {
 
 
 });
+
+function downloadAndOpenPDF(url, fileName, folder) {
+  alert(1);
+    var fileTransfer = new FileTransfer();
+    var filePath = folder + fileName;
+
+    console.log('################# filepath');
+    console.log(filePath);
+
+    fileTransfer.download(
+        url,
+        filePath,
+        function(entry) {
+            console.log('********OK!', filePath);
+            window.plugins.pdfViewer.showPdf(filePath);
+        },
+        function (error) {
+            console.log('Failed, do something');
+            console.log(error.code);
+            console.log(error.source);
+            console.log(error.target);
+            console.log(error.http_status);
+            alert('Oh no, something went wrong');
+        }
+    );
+}
 
 console.log(myApp.template7Data);
 //mainView.router.load({pageName: 'noticias'});
