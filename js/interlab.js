@@ -1,5 +1,20 @@
+$( document ).ready(function() {
+    console.log( "ready!" );
+    $(".popup-overlay").click(function() {
+      myApp.closePanel();
+    });
+
+    $(".panel-menu .list-block li").click(function() {
+      console.log(this.className);
+      $(".panel-menu .list-block li").removeClass('itemActivo');
+      $(this).addClass('itemActivo');
+
+    });
+});
+
 var cotizacion = [];
 var total= 0;
+
 var url = "http://interlab.com.ec/wp-json/posts";
 $.ajax({
   url: url,
@@ -16,6 +31,8 @@ $.ajax({
       agruparFecha = mes[2]+' de '+mesok[mes[1]-1]+' '+mes[0];
       //console.log(agruparFecha);
       data[noti]['date'] = agruparFecha;
+
+      data[noti]['excerpt'] = limitar(data[noti]['title']);
 
     }
     myApp.params.template7Data['noticias'] = data;
@@ -41,18 +58,16 @@ $.ajax({
 
 //CLICK ANALIZO LA BUSQUEDA DE PDF
 $( "#consultoPdf" ).click(function() {
-var inAppBrowserRef;
-      
-            arg0 = $('#orden').val();
-            arg1 = $('#clave').val();
-            if(( arg0 ) && (arg1)){
-              construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
-              cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
-              
-              //cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099", '_blank', 'location=yes');
-            }else{
-              myApp.alert("Ingrese parametros correctos", "INTERLAB");
-            }
+  var inAppBrowserRef;
+  arg0 = $('#orden').val();
+  arg1 = $('#clave').val();
+  if(( arg0 ) && (arg1)){
+    construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
+    cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
+    //cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099", '_blank', 'location=yes');
+  }else{
+    myApp.alert("Ingrese parametros correctos", "INTERLAB");
+  }
 
 
 });
@@ -123,17 +138,19 @@ myApp.onPageBeforeInit('cotizador', function (page) {
        --------------------------------
        --------------------------------
       */
+
       $(".pagina-cotizacion").css('display','block');
 
       if (this.checked){
         //ID agregar a objeto
         cotizacion.push(examen);
         console.log(cotizacion);
+
         actualizoMiLista();
         //precio ir sumando
         var precio = cadena[3];
         total = Number(total) + Number(precio);
-        $('.valor_de_Examenes').html('$'+total);
+        $('.valor_de_Examenes').html('$'+total.toFixed(2));
         //alert(total);
       } else {
       //Elimino de mi listado
@@ -146,7 +163,7 @@ myApp.onPageBeforeInit('cotizador', function (page) {
         //precio ir sumando
         var precio = cadena[3];
         total = Number(total) - Number(precio);
-        $('.valor_de_Examenes').html('$'+total);
+        $('.valor_de_Examenes').html('$'+total.toFixed(2));
         //alert(total);
       }
 
@@ -162,7 +179,9 @@ myApp.onPageBeforeInit('cotizador', function (page) {
 //
 myApp.onPageInit('cotizador', function (page) {
     actualizoMiLista();
-    $('.valor_de_Examenes').html('$'+total);
+    $('.valor_de_Examenes').html('$'+total.toFixed(2));
+
+    
 });
 /*
 ************************************************************************************************************************************************
@@ -237,6 +256,35 @@ function actualizoMiLista(){
     $('.cargoLetra-'+exa[0].toLowerCase()).css('display','block');
     $('.cargo_cotizador .cargoLetra-'+exa[0].toLowerCase()+' .listado-'+exa[0].toLowerCase()).append('<li class="item-content"><div class="item-inner"><div class="item-title">'+exa[2]+'</div><div class="item-after">'+exa[3]+'<div onclick="eliminodeMiLista('+exa[1]+')"><i class="fa fa-times" aria-hidden="true"></i></div></div></div></li>'); 
   }
+  if (cotizacion.length === 0) {
+  }else{
+    $('.vacio_cotizacion').css('display','none');
+  }
+
   //$(".examenes").css('display','none');
 }
+
+
+
+/*
+************************************************************************************************************************************************
+***** INTERLAB FUNCIONES   *********************************************************************************************************************
+************************************************************************************************************************************************
+*/
+
+function limitar(texto){
+  var cont;
+  var caracteres = 40;
+  //var texto = "Tecnología moderna en el diagnóstico y control del paciente con  VIH/SIDA";
+  
+  console.log(texto.length);
+  if(texto.length > caracteres){
+    texto = texto.substring(0, caracteres)+"...";
+  }
+  return texto
+}
+
+
+
+
 
