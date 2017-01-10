@@ -12,21 +12,6 @@ $( document ).ready(function() {
     });
 });
 
-$(document).on('click', '.popup-link', function (e){
-    e.preventDefault();
-    $.get($(this).attr('href'), function (content){
-        myApp.popup('<div class="popup">' + content + '</div>');
-    });
-});
-
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-    StatusBar.overlaysWebView( false );
-    StatusBar.backgroundColorByHexString('#209dc2');
-    StatusBar.styleLightContent();
-}
-
 var cotizacion = [];
 var total= 0;
 
@@ -73,45 +58,19 @@ $.ajax({
 
 //CLICK ANALIZO LA BUSQUEDA DE PDF
 $( "#consultoPdf" ).click(function() {
-  //var inAppBrowserRef;
+  var inAppBrowserRef;
   arg0 = $('#orden').val();
   arg1 = $('#clave').val();
-  //reviso si hay campos vacios
   if(( arg0 ) && (arg1)){
-  //Antes de desacargar primero reviso si esta disponible
-    $.ajax({
-    url: 'http://interlab.com.ec/app/movil/respuesta_servidor.php',
-    dataType: "text",
-    data: {arg0: $('#orden').val(), arg1: $('#clave').val()},
-    success: function (data, textStatus, jqXHR) { 
-      console.log(data);
-      if (!data){
-          //2621709
-          //21099
-          construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
-          //cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
-          window.open(construURL);
-          //cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099", '_blank', 'location=yes');
-        
-      }else{
-        //myApp.alert("Ingrese parametros correctos", "INTERLAB");
-        myApp.alert("Aun no esta disponible", "INTERLAB");
-      }
-
-      },
-      error: function (jqXHR, textStatus, errorThrown) {
-        console.log("error" + errorThrown)
-      }
-    });
-  
+    construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
+    cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
+    //cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099", '_blank', 'location=yes');
   }else{
-    myApp.alert("Ingrese parametros...", "INTERLAB");
-  }  
+    myApp.alert("Ingrese parametros correctos", "INTERLAB");
+  }
 
 
 });
-
-
 
 console.log(myApp.template7Data);
 //mainView.router.load({pageName: 'noticias'});
