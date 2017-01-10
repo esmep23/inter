@@ -553,6 +553,13 @@ COTIZADOR
   text-align: center;
   padding-top: 25%;
 }
+.nota{
+  text-align: center!important;
+  padding-top: 15%;
+  width: 80%;
+  margin-left: auto;
+  margin-right:auto;
+}
 a.close-popup{
   position: absolute;
   right: 0;
