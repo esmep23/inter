@@ -76,7 +76,7 @@ $( "#consultoPdf" ).click(function() {
       }
       if(data == 1){
         //alert(1);
-        //construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
+        construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
         //alert(construURL);
         //cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
         window.open(construURL, '_system', 'location=no')
