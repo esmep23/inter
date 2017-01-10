@@ -75,11 +75,12 @@ $( "#consultoPdf" ).click(function() {
         myApp.alert("Aún no esta disponible", "INTERLAB");
       }
       if(data == 1){
-        alert(1);
-        construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
-        alert(construURL);
-        cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
-        alert(2);
+        //alert(1);
+        //construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
+        //alert(construURL);
+        //cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
+        window.open(construURL, '_system', 'location=no')
+        //alert(2);
       }
       //cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099", '_blank', 'location=yes');
     },

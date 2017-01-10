@@ -112,6 +112,12 @@
                               </div>
 
 
+                              <br/>
+                              <br/>
+
+                              <p><strong>NOTA:</strong> por el momento, solo se puede consultar exámenes realizados en Guayaquil.<br/> Próximamente se habilitarán el resto de ciudades.</p>
+
+
                              
                           
                           </div>
@@ -203,22 +209,6 @@
     <script type="text/javascript" src="js/jquery.googlemap.min.js"></script>
     <div class="popup-overlay"></div>
 
-    <script type="text/javascript">
-    $( document ).ready(function() {
-      alert(1);
-      var url = "http://interlab.com.ec/app/movil/pdf.php?arg0=2621709&arg1=21099"; // image url
-      window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
-          alert(2);
-          var imagePath = fs.root.fullPath + "/logo.png"; // full file path
-          var fileTransfer = new FileTransfer();
-          fileTransfer.download(url, imagePath, function (entry) {
-                  alert(3);
-                   console.log(entry.fullPath); // entry is fileEntry object
-          }, function (error) {
-                   console.log("Some error");
-          });
-       })
-    });
-    </script>
+
    </body>
 </html>
