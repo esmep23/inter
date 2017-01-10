@@ -11,6 +11,23 @@ body,html{
   color: #333!important;
 }
 
+.media>p {
+    color: #444;
+}
+.bar-nav {
+    background-color: #209dc2;
+    color: #ffffff;
+}
+.title {
+    color: #ffffff;
+}
+.bar-nav .icon {
+    color: #ffffff;
+}
+.bar-header-secondary {
+    background-color: #eeeeee;
+}
+
 /*
 ------------------------------------
 ------------------

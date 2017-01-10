@@ -10,6 +10,11 @@ $( document ).ready(function() {
       $(this).addClass('itemActivo');
 
     });
+
+    StatusBar.overlaysWebView( false );
+    StatusBar.backgroundColorByHexString('#209dc2');
+    StatusBar.styleLightContent();
+
 });
 
 var cotizacion = [];
