@@ -56,39 +56,6 @@ $.ajax({
   }
 });
 
-//CLICK ANALIZO LA BUSQUEDA DE PDF
-$( "#consultoPdf" ).click(function() {
-  var inAppBrowserRef;
-  arg0 = $('#orden').val();
-  arg1 = $('#clave').val();
-  if(( arg0 ) && (arg1)){
-
-    $.ajax({
-    url: 'http://interlab.com.ec/app/movil/respuesta_servidor.php',
-    dataType: "text",
-    data: {arg0: $('#orden').val(), arg1: $('#clave').val()},
-    success: function (data, textStatus, jqXHR) { 
-      console.log(data);
-      if(data == 0){
-        myApp.alert("Aún no esta disponible", "INTERLAB");
-      }
-      if(data == 1){
-        construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
-        cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
-      }
-      //cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099", '_blank', 'location=yes');
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-        console.log("error" + errorThrown)
-      }
-    });
-    
-  }else{
-    myApp.alert("Ingrese parametros correctos", "INTERLAB");
-  }
-
-
-});
 
 console.log(myApp.template7Data);
 //mainView.router.load({pageName: 'noticias'});
