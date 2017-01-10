@@ -87,7 +87,7 @@
                                       <div class="item-inner">
                                         <div class="item-title label">No. orden</div>
                                         <div class="item-input">
-                                          <input type="text" name="arg0" id="orden" placeholder="______">
+                                          <input type="text" name="arg0" id="orden" placeholder="______" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"> 
                                         </div>
                                       </div>
                                     </div>
@@ -98,7 +98,7 @@
                                       <div class="item-inner">
                                         <div class="item-title label">Clave</div>
                                         <div class="item-input">
-                                          <input type="text" name="arg1" id="clave" placeholder="______">
+                                          <input type="text" name="arg1" id="clave" placeholder="______" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                                         </div>
                                       </div>
                                     </div>
