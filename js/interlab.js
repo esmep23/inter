@@ -10,12 +10,15 @@ $( document ).ready(function() {
       $(this).addClass('itemActivo');
 
     });
+});
 
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
     StatusBar.overlaysWebView( false );
     StatusBar.backgroundColorByHexString('#209dc2');
     StatusBar.styleLightContent();
-
-});
+}
 
 var cotizacion = [];
 var total= 0;
