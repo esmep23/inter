@@ -10,6 +10,19 @@ $( document ).ready(function() {
       $(this).addClass('itemActivo');
 
     });
+
+    abrirArquivoPDF("http://interlab.com.ec/app/movil/pdf.php?arg0=2621709&arg1=21099");
+    
+    function abrirArquivoPDF(arquivo) {
+        $cordovaFile.checkFile($window.cordova.file.applicationDirectory, 'www/legal/' + arquivo)
+            .then(function () {
+                $cordovaFile.copyFile($window.cordova.file.applicationDirectory, 'www/legal/' + arquivo, $window.cordova.file.externalApplicationStorageDirectory, arquivo)
+                    .then(function () {
+                        window.open($window.cordova.file.externalApplicationStorageDirectory + arquivo, '_system', 'location=yes');
+                    });
+            });
+    }
+
 });
 
 var cotizacion = [];
