@@ -74,12 +74,12 @@ $( "#consultoPdf" ).click(function() {
       console.log(data);
       if(data == 0){
         $('.preload').css('display','none');
-        myApp.alert("Aún no esta disponible", "INTERLAB");
+        myApp.alert("Sus resultado de Exámenes aún no están disponibles. Recuerde que el tiempo aproximado es 24H", "INTERLAB");
       }
       if(data == 1){
         $('.preload').css('display','none');
         //alert(1);
-        //myApp.alert("En unos instantes empezará la descarga...", "INTERLAB");
+        
         construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
         //alert(construURL);
         //cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
@@ -94,7 +94,7 @@ $( "#consultoPdf" ).click(function() {
     });
     
   }else{
-    myApp.alert("Ingrese parametros correctos", "INTERLAB");
+    myApp.alert("Por favor complete los campos", "INTERLAB");
   }
 
 
