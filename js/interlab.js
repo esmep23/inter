@@ -65,6 +65,7 @@ $( "#consultoPdf" ).click(function() {
   arg1 = $('#clave').val();
   if(( arg0 ) && (arg1)){
 
+    $('.preload').css('display','block');
     $.ajax({
     url: 'http://interlab.com.ec/app/movil/respuesta_servidor.php',
     dataType: "text",
@@ -72,9 +73,11 @@ $( "#consultoPdf" ).click(function() {
     success: function (data, textStatus, jqXHR) { 
       console.log(data);
       if(data == 0){
+        $('.preload').css('display','none');
         myApp.alert("Aún no esta disponible", "INTERLAB");
       }
       if(data == 1){
+        $('.preload').css('display','none');
         //alert(1);
         myApp.alert("En unos instantes empezará la descarga...", "INTERLAB");
         construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
