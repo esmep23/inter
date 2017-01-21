@@ -185,7 +185,7 @@ myApp.onPageBeforeInit('cotizador', function (page) {
     
     myApp.closePanel();
 
-    $('.searchbar-input').keypress(function() {
+    $('.searchbar-input').keyup(function() {
       $(".menuletters").css('display','none');
       $(".popup-23 .examenes.list-block li").css('display', 'block');
       $('.popup-23 .examenes.list-block li').removeAttr('style');
