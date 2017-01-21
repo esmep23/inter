@@ -366,6 +366,7 @@ PAGINA DE TALENTO HUMANO
 }
 #talentohumano ul li .item-inner.colaboradores{
   width: 100%!important;
+  padding-left: 10px!important;
 }
 #talentohumano ul li .item-inner.colaboradores .item-title{
   white-space: normal!important;
@@ -510,6 +511,7 @@ h3.titularColaborador{
 p.fecha{
   color: #333;
   font-size: small!important;
+  margin: 10px 0!important;
 }
 
 
