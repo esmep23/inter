@@ -27,135 +27,200 @@
 
         </div>
 
-        
-        <div class="content-block-title"><h2>NUESTROS COLABORADORES</h2>Administración</div>
-        <div class="list-block media-list">
-          
-          <ul>{{#each administracion}}
-            <li>
-              <a href="#" class="item-link item-content" >
-                <div class="item-inner colaboradores">
-                  <p class="item-subtitle">{{nombre}}</p>
-                  <p class="item-title">{{cargo}}</p>
-                </div>
-              </a>
-            </li>
-          {{/each}}</ul>
+        <div class="list-block">
+          <li class="accordion-item">
+            <a href="#norte" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title"><h2>NUESTROS COLABORADORES</h2>Administración</div>
+              </div>
+            </a>
+            <div class="accordion-item-content">
+              <div class="content-block">
+                <ul >
+                  <strong>{{#each administracion}}</strong>
+                  <li>
+                      <div class="item-inner colaboradores">
+                        <p class="item-subtitle">{{nombre}}</p>
+                        <p class="item-title">{{cargo}}</p>
+                      </div>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+          </li>
+        </div>
 
+        <div class="list-block">
+          <li class="accordion-item">
+            <a href="#norte" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title">PROFESIONALES MÉDICOS ESPECIALIZADOS EN MEDICINA DEL LABORATORIO</div>
+              </div>
+            </a>
+            <div class="accordion-item-content">
+              <div class="content-block">
+                <ul >
+                  <strong>{{#each laboratorio}}</strong>
+                  <li>
+                      <div class="item-inner colaboradores">
+                        <p class="item-subtitle">{{nombre}}</p>
+                        <p class="item-title">{{cargo}}</p>
+                      </div>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+          </li>
+        </div>
+
+        <div class="list-block">
+          <li class="accordion-item">
+            <a href="#norte" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title">PROFESIONALES EN QUÍMICA Y FARMACIA</div>
+              </div>
+            </a>
+            <div class="accordion-item-content">
+              <div class="content-block">
+                <ul >
+                  <strong>{{#each quimica}}</strong>
+                  <li>
+                      <div class="item-inner colaboradores">
+                        <p class="item-subtitle">{{nombre}}</p>
+                        <p class="item-title">{{cargo}}</p>
+                      </div>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+          </li>
+        </div> 
+
+        <div class="list-block">
+          <li class="accordion-item">
+            <a href="#norte" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title">LICENCIADOS EN BIOLOGÍA</div>
+              </div>
+            </a>
+            <div class="accordion-item-content">
+              <div class="content-block">
+                <ul >
+                  <strong>{{#each biologia}}</strong>
+                  <li>
+                      <div class="item-inner colaboradores">
+                        <p class="item-subtitle">{{nombre}}</p>
+                        <p class="item-title">{{cargo}}</p>
+                      </div>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+          </li>
+        </div>  
+
+        <div class="list-block">
+          <li class="accordion-item">
+            <a href="#norte" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title"><h2>PROFESIONALES EN TECNOLOGÍA MÉDICA</h2>LICENCIADOS EN LABORATORIO CLÍNICO</div>
+              </div>
+            </a>
+            <div class="accordion-item-content">
+              <div class="content-block">
+                <ul >
+                  <strong>{{#each labclinico}}</strong>
+                  <li>
+                      <div class="item-inner colaboradores">
+                        <p class="item-subtitle">{{nombre}}</p>
+                        <p class="item-title">{{cargo}}</p>
+                      </div>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+          </li>
+        </div>  
+
+        <div class="list-block">
+          <li class="accordion-item">
+            <a href="#norte" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title">TECNÓLOGOS MÉDICOS EN LABORATORIO CLÍNICO</div>
+              </div>
+            </a>
+            <div class="accordion-item-content">
+              <div class="content-block">
+                <ul >
+                  <strong>{{#each tecnologoLabClin}}</strong>
+                  <li>
+                      <div class="item-inner colaboradores">
+                        <p class="item-subtitle">{{nombre}}</p>
+                        <p class="item-title">{{cargo}}</p>
+                      </div>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+          </li>
         </div>
 
 
-        <div class="content-block-title">PROFESIONALES MÉDICOS ESPECIALIZADOS EN MEDICINA DEL LABORATORIO</div>
-        <div class="list-block media-list">
-          
-          <ul>{{#each laboratorio}}
-            <li>
-              <a href="#" class="item-link item-content" >
-                <div class="item-inner colaboradores">
-                  <p class="item-subtitle">{{nombre}}</p>
-                  <p class="item-title">{{cargo}}</p>
-                </div>
-              </a>
-            </li>
-          {{/each}}</ul>
-
-        </div>
-
-        <div class="content-block-title">PROFESIONALES EN QUÍMICA Y FARMACIA</div>
-        <div class="list-block media-list">
-          
-          <ul>{{#each quimica}}
-            <li>
-              <a href="#" class="item-link item-content" >
-                <div class="item-inner colaboradores">
-                  <p class="item-subtitle">{{nombre}}</p>
-                  <p class="item-title">{{cargo}}</p>
-                </div>
-              </a>
-            </li>
-          {{/each}}</ul>
-
-        </div>
+        <div class="list-block">
+          <li class="accordion-item">
+            <a href="#norte" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title">FLEBOTOMISTAS</div>
+              </div>
+            </a>
+            <div class="accordion-item-content">
+              <div class="content-block">
+                <ul >
+                  <strong>{{#each flebotomistas}}</strong>
+                  <li>
+                      <div class="item-inner colaboradores">
+                        <p class="item-subtitle">{{nombre}}</p>
+                        <p class="item-title">{{cargo}}</p>
+                      </div>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+          </li>
+        </div>  
 
 
-        <div class="content-block-title">LICENCIADOS EN BIOLOGÍA</div>
-        <div class="list-block media-list">
-          
-          <ul>{{#each biologia}}
-            <li>
-              <a href="#" class="item-link item-content" >
-                <div class="item-inner colaboradores">
-                  <p class="item-subtitle">{{nombre}}</p>
-                  <p class="item-title">{{cargo}}</p>
-                </div>
-              </a>
-            </li>
-          {{/each}}</ul>
-
-        
-
-        <div class="content-block-title"><h2>PROFESIONALES EN TECNOLOGÍA MÉDICA</h2>LICENCIADOS EN LABORATORIO CLÍNICO</div>
-        <div class="list-block media-list">
-          
-          <ul>{{#each labclinico}}
-            <li>
-              <a href="#" class="item-link item-content" >
-                <div class="item-inner">
-                  <p class="item-title">{{nombre}}</p>
-                </div>
-              </a>
-            </li>
-          {{/each}}</ul>
-
-
-
-
-
-        <div class="content-block-title">TECNÓLOGOS MÉDICOS EN LABORATORIO CLÍNICO</div>
-        <div class="list-block media-list">
-          
-          <ul>{{#each tecnologoLabClin}}
-            <li>
-              <a href="#" class="item-link item-content" >
-                <div class="item-inner">
-                  <p class="item-title">{{nombre}}</p>
-                </div>
-              </a>
-            </li>
-          {{/each}}</ul>
-
-        </div>
-
-
-        <div class="content-block-title">FLEBOTOMISTAS</div>
-        <div class="list-block media-list">
-          
-          <ul>{{#each flebotomistas}}
-            <li>
-              <a href="#" class="item-link item-content" >
-                <div class="item-inner">
-                  <p class="item-title">{{nombre}}</p>
-                </div>
-              </a>
-            </li>
-          {{/each}}</ul>
-          
-        </div>
-
-        <div class="content-block-title">SERVICIO DE TOMA DE MUESTRAS A DOMICILIO</div>
-        <div class="list-block media-list">
-          
-          <ul>{{#each tomademuestra}}
-            <li>
-              <a href="#" class="item-link item-content" >
-                <div class="item-inner">
-                  <p class="item-title">{{nombre}}</p>
-                </div>
-              </a>
-            </li>
-          {{/each}}</ul>
-          
-        </div>        
+        <div class="list-block">
+          <li class="accordion-item">
+            <a href="#norte" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title">SERVICIO DE TOMA DE MUESTRAS A DOMICILIO</div>
+              </div>
+            </a>
+            <div class="accordion-item-content">
+              <div class="content-block">
+                <ul >
+                  <strong>{{#each tomademuestra}}</strong>
+                  <li>
+                      <div class="item-inner colaboradores">
+                        <p class="item-subtitle">{{nombre}}</p>
+                        <p class="item-title">{{cargo}}</p>
+                      </div>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+          </li>
+        </div>                
+       
 
     </div>
   </div>

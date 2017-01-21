@@ -357,8 +357,8 @@ var myApp = new Framework7({
                 {
                     local: 'Laboratorio Principal',
                     direccion: 'Diagonal a C.C. San Marino Shopping.',
-                    latitud: '-2.166035',
-                    longitud: '-79.911245',
+                    latitud: '-2.1694135',
+                    longitud: '-79.8963321',
                     zoom: '19',
                     telefono: '04-2594010',
                     horario: '<b>LU-DO:</b> Atención 24 horas'

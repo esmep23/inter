@@ -2,22 +2,25 @@
 <div class="navbar">
   <div class="navbar-inner">
     <div class="left sliding"><a href="noticias.html" class="back link" ><i class="f7-icons">left</i></a></div>
-    <div class="center sliding">NOTICIA</div>
+    <div class="center sliding">Noticia</div>
     <div class="right"></div>
   </div>
 </div>
 <div class="pages">
   <div data-page="noticia" class="page noticia">
-    <div class="page-content">
-          <div id="inside_imagenNoticia" style="background-image: url({{featured_image.attachment_meta.sizes.large.url}})"></div>
-          <div class="content-block-title">
+    <div class="page-content flex-page">
+      <div class="size-30 inside_imagenNoticia" style="background-image: url({{featured_image.attachment_meta.sizes.large.url}})"></div>
+      <div class="size-10">
+        <div class="content-block-title">
             <p class="fecha">{{date}}</p>
             <h2>{{title}}</h2>
-          </div>
+          </div>       
+      </div>
+      <div class="size-60">
         <div class="content-block">
           <div class="content-block-inner">{{acf.contenido_app}}</div>
         </div>
-      
+      </div>
     </div>
   </div>
 </div>

@@ -14,9 +14,9 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-
   </head>
   <body>
+
     <div class="statusbar-overlay"></div>
     <div class="panel-overlay"></div>
     <div class="preload"><span class="preloader" style="width:50px; height:50px"></span></div>
@@ -27,27 +27,31 @@
                 <ul >
                   <li class="consulta"><a href="index.html" class="item-link">
                       <div class="item-inner"> 
-                        <div class="item-title menu"><span>CONSULTA DE EXÁMENES</span></div>
+                        <div class="item-title menu"><span>Consulta de exámenes</span></div>
                       </div></a></li>
                   <li class="cotizador"><a href="cotizador.html" data-context-name="cotizador"  class="item-link">
                       <div class="item-inner"> 
-                        <div class="item-title menu"><span>COTIZADOR</span></div>
+                        <div class="item-title menu"><span>Cotizador</span></div>
                       </div></a></li>
                   <li class="sucursales"><a href="sucursales.html" data-context-name="sucursales" class="item-link">
                       <div class="item-inner">
-                        <div class="item-title menu"><span>SUCURSALES</span></div>
+                        <div class="item-title menu"><span>Sucursales</span></div>
                       </div></a></li>
                   <li class="noticias"><a href="noticias.html" data-context-name="noticias" class="item-link">
                       <div class="item-inner">
-                        <div class="item-title menu"><span>NOTICIAS</span></div>
+                        <div class="item-title menu"><span>Noticias</span></div>
                       </div></a></li>
+                  <!--<li class="noticias"><a href="espaciosFlex.html" data-context-name="expaciosFlex" class="item-link">
+                      <div class="item-inner">
+                        <div class="item-title menu"><span>EspaciosFlex</span></div>
+                      </div></a></li>-->
                   <!--<li><a href="cars.html" data-context-name="cars" class="item-link">
                       <div class="item-inner">
                         <div class="item-title">CARS</div>
                       </div></a></li>-->
                   <li class="talentohumano"><a href="talentohumano.html" data-context-name="talentohumano" class="item-link">
                       <div class="item-inner"> 
-                        <div class="item-title menu"><span>TALENTO HUMANO</span></div>
+                        <div class="item-title menu"><span>Talento Humano</span></div>
                       </div></a></li>
                 </ul>
               </div>
@@ -67,7 +71,7 @@
           <div class="navbar">
             <div class="navbar-inner">
               <div class="left sliding"><a href="#" class="link icon-only open-panel"><i class="f7-icons">bars</i></a></div>
-              <div class="center sliding">CONSULTA DE EXÁMENES</div>
+              <div class="center sliding">Consulta de exámenes</div>
               <div class="right"></div>
             </div>
           </div>
@@ -75,7 +79,7 @@
 
           <div class="pages">
             <div data-page="index" class="page">
-              <div class="page-content">
+              <div id="fondo_home" class="page-content">
                    <div class="content-block">
 
 
@@ -88,9 +92,8 @@
                                     <div class="item-content">
                                       <!--<div class="item-media"><i class="icon f7-icons">No. Orden</i></div>-->
                                       <div class="item-inner">
-                                        <div class="item-title label">No. orden</div>
                                         <div class="item-input">
-                                          <input type="tel" name="arg0" id="orden" placeholder="______" >
+                                          <input type="tel" name="arg0" id="orden" placeholder="Ingrese número de orden">
                                         </div>
                                       </div>
                                     </div>
@@ -99,9 +102,8 @@
                                     <div class="item-content">
                                       <!--<div class="item-media"><i class="icon f7-icons">unlock</i></div>-->
                                       <div class="item-inner">
-                                        <div class="item-title label">Clave</div>
                                         <div class="item-input">
-                                          <input type="tel" name="arg1" id="clave" placeholder="______" >
+                                          <input type="tel" name="arg1" id="clave" placeholder="Ingrese Clave">
                                         </div>
                                       </div>
                                     </div>
@@ -110,7 +112,7 @@
                               </ul>
                               <div class="buttons-row">
                                       
-                                      <div id="consultoPdf" class="external button button-raised button-fill color-teal">CONSULTAR</div>
+                                      <div id="consultoPdf" class="external button button-raised button-fill color-teal">Consultar</div>
                                       <!--<a href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" class="external button button-raised button-fill color-teal" target="_blank">CONSULTAR</a>-->
                               </div>
 
@@ -118,33 +120,18 @@
                               <br/>
                               <br/>
 
-                              <div class="nota">
+                              <div class="nota invisible">
                                 <p><strong>NOTA:</strong> por el momento, solo se puede consultar exámenes realizados en Guayaquil. Próximamente se habilitarán el resto de ciudades.</p>
                               </div>
 
-
-                             
-                          
                           </div>
-
-<!--<a href="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" class="external">LINK PRINCIPAL</a> funcionaba-->
-                          <!--<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-                          <a href="#" class="external" onclick="clickUri('http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099'); return false;">LINK</a>
-                          <br/>
-                          <br/>
-                          <br/>
-                          <br/>
-                          <object data="resultado.pdf" type="application/pdf" style="width:100%;height:100%"></object>
-                          <object href="resultado.pdf" type="application/pdf" style="width:100%;height:100%"></object>
-                          <iframe src="resultado.pdf" style="width:100%; height: 1100px;"></iframe>
-                          <iframe src="http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099" style="width:100%; height: 1100px;"></iframe>
-                          -->
-
                   </div>
+                              <div class="footer">
+                                <span>Copyright 2017 | Pocket.ec</span>
+                              </div>
+
+                           
+
               </div>
 
               </div>
@@ -160,16 +147,21 @@
     </div>
 
 
-      <!-- -->
+      <!-- 
     <div class="popup popup-letras">
        <div class="content-block">
           
           <a href="#" class="close-popup"><i class="fa fa-times" aria-hidden="true"></i></a>
-            <form>
-                <input type="text" name="buscador" placeholder="Buscar Exámen...">
-                <div class="btnBuscador"><i class="fa fa-search" aria-hidden="true"></i></div>
+         
+          <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+            <div class="searchbar-input">
+              <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
+            </div><a href="#" class="searchbar-cancel">Cancel</a>
+          </form>
+ 
+          <div class="searchbar-overlay"></div>
 
-            </form>
+          <div class="menuletters">
             <div class="letter">A</div>
             <div class="letter">B</div>
             <div class="letter">C</div>
@@ -196,8 +188,36 @@
             <div class="letter">X</div><br/>
             <div class="letter">Y</div>
             <div class="letter">Z</div>
+          </div>
+
+          <div class="infoDeLetras" data-page="examenes" >
+
+            <div class="list-group">
+              <ul>
+                {{#each this}}
+                <li class="{{letter}}">
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title">{{nombre}}</div>
+                      <div class="item-after"><span>${{valor}}</span> 
+                        <input type="checkbox" id="cbox" class="id-{{id}}" value="{{letter}}|{{id}}|{{nombre}}|{{valor}}">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                {{/each}}
+              </ul>
+              <div class="no-hay-letras">
+                <span>No existen exámenes con esta letra</span>
+              </div>
+            </div>
+            
+          </div>
        </div>
-    </div>
+    </div>-->
+
+
+    
 
     <!-- -->
     <script type="text/javascript" src="cordova.js"></script>
