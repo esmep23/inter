@@ -460,8 +460,8 @@ img.imgNoticia{
 
 .noticia .content-block-title{
   margin:0;
-  margin-left: 4%;
-  height: 100%!important;
+  margin-left: 4%;/*
+  height: 100%!important;*/
 }
 
 .noticia .content-block-title h3{
