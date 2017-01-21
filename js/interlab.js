@@ -470,8 +470,11 @@ function eliminodeMiLista(id){
           //precio ir restando
           precio = exa[3];
           total = Number(total) - Number(precio);
-          $('.valor_de_Examenes .texto').html('$'+total.toFixed(2));
-
+          if total == 0{
+            $('.valor_de_Examenes .texto').html('$0.00');
+          }else{
+            $('.valor_de_Examenes .texto').html('$'+total.toFixed(2));
+          }
           //pregunto si ha objetos en una letra
           //sumo letra
             switch (exa[0]) {
