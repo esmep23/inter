@@ -458,6 +458,15 @@ var myApp = new Framework7({
                     zoom: '16',
                     telefono: '04-2594010 - Ext.: 202 | Cel.: 0992161450',
                     horario: '<b>LU-VI:</b> 06:00 - 18:00 horas, <b>SA:</b> 07:00 - 12:00 horas'
+                },
+                {
+                    local: 'Edifio Xima',
+                    direccion: 'Cdla. Los Arcos, Edificio Xima. Local Interno No. 7 planta baja.',
+                    latitud: '-2.1386628',
+                    longitud: '-79.867893',
+                    zoom: '17',
+                    telefono: '4-2594010 Ext. 213',
+                    horario: '<b>LU-VI:</b> 07:00 - 15:00 horas'
                 }
             ],
             lajoya: [
@@ -469,16 +478,7 @@ var myApp = new Framework7({
                     zoom: '15',
                     telefono: '04-2594010 - Ext.: 211',
                     horario: '<b>LU-VI:</b> 06:00 - 16:00 horas, <b>SA:</b> 07:00 - 12:00 horas'
-                },
-                {
-                    local: 'Edifio Xima',
-                    direccion: 'Cdla. Los Arcos, Edificio Xima. Local Interno No. 7 planta baja.',
-                    latitud: '-2.1386628',
-                    longitud: '-79.867893',
-                    zoom: '17',
-                    telefono: '4-2594010 Ext. 213',
-                    horario: '<b>LU-VI:</b> 07:00 - 15:00 horas'
-                }
+                }                
             ],
             duran:[
                 
