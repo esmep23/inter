@@ -453,7 +453,7 @@ function mapa(latitud, longitud, ubicacion, zoom, infor){
 
 
 function eliminodeMiLista(id){
-  alert(id);
+  //alert(id);
   $('.cargo_cotizador .miLista').empty();
       for (var ele in cotizacion) {
         
