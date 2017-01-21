@@ -45,6 +45,7 @@ var _cletraW=0;
 var _cletraX=0; 
 var _cletraY=0; 
 var _cletraZ=0;
+var globalLetras=0;
 
 var url = "http://interlab.com.ec/wp-json/posts";
 $.ajax({
@@ -268,106 +269,132 @@ myApp.onPageBeforeInit('cotizador', function (page) {
         switch (cadena[0]) {
           case "A":
             _cletraA++;
+            globalLetras++;
             //console.log(_cletraA);            //Sentencias ejecutadas cuando el resultado de expresion coincide con valor1
             break;
           case "B":
             _cletraB++;
+            globalLetras++;
             //console.log(_cletraB);
             break;
           case "C":
             _cletraC++;
+            globalLetras++;
             //console.log(_cletraC);
             break;
           case "D":
             _cletraD++;
+            globalLetras++;
             //console.log(_cletraD);
             break;
           case "E":
             _cletraE++;
+            globalLetras++;
             //console.log(_cletraE);
             break;
           case "F":
             _cletraF++;
+            globalLetras++;
             //console.log(_cletraF);
             break;
           case "G":
             _cletraG++;
+            globalLetras++;
             //console.log(_cletraG);
             break;
           case "H":
             _cletraH++;
+            globalLetras++;
             //console.log(_cletraH);
             break;
           case "I":
             _cletraI++;
+            globalLetras++;
             //console.log(_cletraI);
             break;
           case "J":
             _cletraJ++;
+            globalLetras++;
             //console.log(_cletraJ);
             break;
           case "K":
             _cletraK++;
+            globalLetras++;
             //console.log(_cletraK);
             break;
           case "L":
             _cletraL++;
+            globalLetras++;
             //console.log(_cletraL);
             break;
           case "M":
             _cletraM++;
+            globalLetras++;
             //console.log(_cletraM);
             break;
           case "N":
             _cletraN++;
+            globalLetras++;
             //console.log(_cletraN);
             break;
           case "O":
             _cletraO++;
+            globalLetras++;
             //console.log(_cletraO);
             break;
           case "P":
             _cletraP++;
+            globalLetras++;
             //console.log(_cletraP);
             break;
           case "Q":
             _cletraQ++;
+            globalLetras++;
             //console.log(_cletraQ);
             break;
           case "R":
             _cletraR++;
+            globalLetras++;
             //console.log(_cletraR);
             break;
           case "S":
             _cletraS++;
+            globalLetras++;
             //console.log(_cletraS);
             break;
           case "T":
             _cletraT++;
+            globalLetras++;
             //console.log(_cletraT);
             break;
           case "U":
             _cletraU++;
+            globalLetras++;
             //console.log(_cletraU);
             break;
           case "V":
             _cletraV++;
+            globalLetras++;
             //console.log(_cletraV);
             break;
           case "W":
             _cletraW++;
+            globalLetras++;
             //console.log(_cletraW);
             break;
           case "X":
             _cletraX++;
+            globalLetras++;
             //console.log(_cletraX);
             break;
           case "Y":
             _cletraY++;
+            globalLetras++;
             //console.log(_cletraY);
             break;
           case "Z":
             _cletraZ++;
+            globalLetras++;
             //console.log(_cletraZ);
             break;
         }
@@ -470,16 +497,15 @@ function eliminodeMiLista(id){
           //precio ir restando
           precio = exa[3];
           total = Number(total) - Number(precio);
-          if total == 0{
-            $('.valor_de_Examenes .texto').html('$0.00');
-          }else{
+          
             $('.valor_de_Examenes .texto').html('$'+total.toFixed(2));
-          }
+          
           //pregunto si ha objetos en una letra
           //sumo letra
             switch (exa[0]) {
               case "A":
                 _cletraA=_cletraA-1;
+                globalLetras=globalLetras-1
                 if(_cletraA == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -488,6 +514,7 @@ function eliminodeMiLista(id){
                 break;
               case "B":
                 _cletraB=_cletraB-1;
+                globalLetras=globalLetras-1
                 if(_cletraB == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -496,6 +523,7 @@ function eliminodeMiLista(id){
                 break;
               case "C":
                 _cletraC=_cletraC-1;
+                globalLetras=globalLetras-1
                 if(_cletraC == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -504,6 +532,7 @@ function eliminodeMiLista(id){
                 break;
               case "D":
                 _cletraD=_cletraD-1;
+                globalLetras=globalLetras-1
                 if(_cletraD == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -512,6 +541,7 @@ function eliminodeMiLista(id){
                 break;
               case "E":
                 _cletraE=_cletraE-1;
+                globalLetras=globalLetras-1
                 if(_cletraE == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -520,6 +550,7 @@ function eliminodeMiLista(id){
                 break;
               case "F":
                 _cletraF=_cletraF-1;
+                globalLetras=globalLetras-1
                 if(_cletraF == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -528,6 +559,7 @@ function eliminodeMiLista(id){
                 break;
               case "G":
                 _cletraG=_cletraG-1;
+                globalLetras=globalLetras-1
                 if(_cletraG == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -536,6 +568,7 @@ function eliminodeMiLista(id){
                 break;
               case "H":
                 _cletraH=_cletraH-1;
+                globalLetras=globalLetras-1
                 if(_cletraH == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -544,6 +577,7 @@ function eliminodeMiLista(id){
                 break;
               case "I":
                 _cletraI=_cletraI-1;
+                globalLetras=globalLetras-1
                 if(_cletraI == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -552,6 +586,7 @@ function eliminodeMiLista(id){
                 break;
               case "J":
                 _cletraJ=_cletraJ-1;
+                globalLetras=globalLetras-1
                 if(_cletraJ == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -560,6 +595,7 @@ function eliminodeMiLista(id){
                 break;
               case "K":
                 _cletraK=_cletraK-1;
+                globalLetras=globalLetras-1
                 if(_cletraK == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -568,6 +604,7 @@ function eliminodeMiLista(id){
                 break;
               case "L":
                 _cletraL=_cletraL-1;
+                globalLetras=globalLetras-1
                 if(_cletraL == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -576,6 +613,7 @@ function eliminodeMiLista(id){
                 break;
               case "M":
                 _cletraM=_cletraM-1;
+                globalLetras=globalLetras-1
                 if(_cletraM == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -584,6 +622,7 @@ function eliminodeMiLista(id){
                 break;
               case "N":
                 _cletraN=_cletraN-1;
+                globalLetras=globalLetras-1
                 if(_cletraN == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -592,6 +631,7 @@ function eliminodeMiLista(id){
                 break;
               case "O":
                 _cletraO=_cletraO-1;
+                globalLetras=globalLetras-1
                 if(_cletraO == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -600,6 +640,7 @@ function eliminodeMiLista(id){
                 break;
               case "P":
                 _cletraP=_cletraP-1;
+                globalLetras=globalLetras-1
                 if(_cletraP == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -608,6 +649,7 @@ function eliminodeMiLista(id){
                 break;
               case "Q":
                 _cletraQ=_cletraQ-1;
+                globalLetras=globalLetras-1
                 if(_cletraQ == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -616,6 +658,7 @@ function eliminodeMiLista(id){
                 break;
               case "R":
                 _cletraR=_cletraR-1;
+                globalLetras=globalLetras-1
                 if(_cletraR == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -624,6 +667,7 @@ function eliminodeMiLista(id){
                 break;
               case "S":
                 _cletraS=_cletraS-1;
+                globalLetras=globalLetras-1
                 if(_cletraS == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -632,6 +676,7 @@ function eliminodeMiLista(id){
                 break;
               case "T":
                 _cletraT=_cletraT-1;
+                globalLetras=globalLetras-1
                 if(_cletraT == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -640,6 +685,7 @@ function eliminodeMiLista(id){
                 break;
               case "U":
                 _cletraU=_cletraU-1;
+                globalLetras=globalLetras-1
                 if(_cletraU == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -648,6 +694,7 @@ function eliminodeMiLista(id){
                 break;
               case "V":
                 _cletraV=_cletraV-1;
+                globalLetras=globalLetras-1
                 if(_cletraV == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -656,6 +703,7 @@ function eliminodeMiLista(id){
                 break;
               case "W":
                 _cletraW=_cletraW-1;
+                globalLetras=globalLetras-1
                 if(_cletraW == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -664,6 +712,7 @@ function eliminodeMiLista(id){
                 break;
               case "X":
                 _cletraX=_cletraX-1;
+                globalLetras=globalLetras-1
                 if(_cletraX == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -672,6 +721,7 @@ function eliminodeMiLista(id){
                 break;
               case "Y":
                 _cletraY=_cletraY-1;
+                globalLetras=globalLetras-1
                 if(_cletraY == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -680,6 +730,7 @@ function eliminodeMiLista(id){
                 break;
               case "Z":
                 _cletraZ=_cletraZ-1;
+                globalLetras=globalLetras-1
                 if(_cletraZ == 0){
                   //Escondo la letras
                   $(".cargoLetra-"+exa[0].toLowerCase()).css('display','none');
@@ -688,7 +739,10 @@ function eliminodeMiLista(id){
                 break;
             }
 
-          
+          if(globalLetras == 0){
+
+          }
+        
         }
        
       }
@@ -704,6 +758,8 @@ function actualizoMiLista(){
     $('.cargo_cotizador .cargoLetra-'+exa[0].toLowerCase()+' .listado-'+exa[0].toLowerCase()).append('<li class="item-content"><div class="item-inner"><div class="item-title">'+exa[2]+'</div><div class="item-after">'+exa[3]+'<div onclick="eliminodeMiLista('+exa[1]+')"><i class="fa fa-times" aria-hidden="true"></i></div></div></div></li>'); 
   }
   if (cotizacion.length === 0) {
+    $('.valor_de_Examenes .texto').html('$0.00');
+    $('.vacio_cotizacion').css('display','block');
   }else{
     $('.vacio_cotizacion').css('display','none');
   }
