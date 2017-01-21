@@ -296,7 +296,10 @@ PAGINA DE SUCURSALES
   background-color: #eeeeee!important;
   padding: 0 3%;
   border-bottom: 1px solid #cccccc;
-  padding-bottom: 2%;
+  padding-bottom: 0;
+}
+#pageSucursales .list-block li i{
+  float: left;
 }
 #pageSucursales .list-block li.accordion-item{
  border-bottom: 0; 
@@ -306,8 +309,7 @@ PAGINA DE SUCURSALES
   display: inline-block!important;
 }
 #pageSucursales .list-block .accordion-item ul{
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 3%;
 }
 /*
 ------------------------------------
@@ -460,10 +462,10 @@ img.imgNoticia{
   margin-left: 4%;
 }
 
-.noticia .content-block-title h2{
+.noticia .content-block-title h3{
   font-weight: bolder;
   white-space: normal!important;
-  font-size: larger!important;
+  font-size: small!important;
 }
 
 h2.content-block-title{
@@ -727,4 +729,22 @@ FLEX
 .Aligner-item {
   max-width: 50%;
   font-size: 50px;
+}
+
+
+.fa-ul {
+    padding-left: 0!important;
+        margin-left: 3%!important;
+    list-style-type: none!important;
+}
+
+.fa-ul>li {
+    position: relative!important;
+    border-bottom: 0!important;
+}
+
+.fa-li {
+    left: -1.142857em!important;
+    width: -1.14285714em!important;
+    font-size: large!important;
 }
