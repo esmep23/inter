@@ -88,32 +88,43 @@ $.ajax({
     console.log("error" + errorThrown)
   }
 });
-/*
-var urlSucursales = "http://interlab.com.ec//facebook/locales/php/listado_sucursales2.php"
+
+var urlCiudades = "http://interlab.com.ec/app/movil/actions/ciudades.php"
 
 $.ajax({
-  url: urlSucursales,
+  url: urlCiudades,
   dataType: "json",
   success: function (data, textStatus, jqXHR) { 
-    myApp.params.template7Data['sucursales'] = data;
+    //myApp.params.template7Data['sucursales'] = data;
+
+    if(data!=null && data!='' && data!='[]'){ 
+          
+          $.each(data,function(key,value){ 
+            id = value.id;
+            ciudad = value.ciudad;
+            $('#ciudad').append('<option value="'+id+'">'+ciudad+'</option>');
+          });
+        }   
+
   },
   error: function (jqXHR, textStatus, errorThrown) {
     console.log("error" + errorThrown)
   }
 });
-*/
+
 //CLICK ANALIZO LA BUSQUEDA DE PDF
 $( "#consultoPdf" ).click(function() {
   var inAppBrowserRef;
   arg0 = $('#orden').val();
   arg1 = $('#clave').val();
-  if(( arg0 ) && (arg1)){
+  arg2 = $('#ciudad').val();
+  if(( arg0 ) && (arg1) && (arg2)){
 
     $('.preload').css('display','block');
     $.ajax({
     url: 'http://interlab.com.ec/app/movil/respuesta_servidor.php',
     dataType: "text",
-    data: {arg0: $('#orden').val(), arg1: $('#clave').val()},
+    data: {arg0: $('#orden').val(), arg1: $('#clave').val(), arg2: $('#ciudad').val()},
     success: function (data, textStatus, jqXHR) { 
       console.log(data);
       if(data == 0){
@@ -124,7 +135,7 @@ $( "#consultoPdf" ).click(function() {
         $('.preload').css('display','none');
         //alert(1);
         
-        construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1;
+        construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1+'&arg2='+arg2;
         //alert(construURL);
         //cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
         window.open(construURL, '_system', 'location=no')

@@ -250,6 +250,10 @@ PAGINA DE CONSULTA
   background-size: cover;
 
 }
+
+select#ciudad{
+  font-size: small;
+}
 /*
 ------------------------------------
 ------------------
