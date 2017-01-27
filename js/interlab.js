@@ -89,6 +89,29 @@ $.ajax({
   }
 });
 
+var urlCiudades = "http://interlab.com.ec/app/movil/actions/ciudades.php"
+
+    $.ajax({
+      url: urlCiudades,
+      dataType: "json",
+      success: function (data, textStatus, jqXHR) { 
+        //myApp.params.template7Data['sucursales'] = data;
+
+        if(data!=null && data!='' && data!='[]'){ 
+              
+              $.each(data,function(key,value){ 
+                id = value.id;
+                ciudad = value.ciudad;
+                $('#ciudad').append('<option value="'+id+'">'+ciudad+'</option>');
+              });
+            }   
+
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log("error" + errorThrown)
+      }
+    });
+
 var urlSucursales = "http://interlab.com.ec/app/movil/actions/sucursales.php";
 $.ajax({
   url: urlSucursales,
@@ -102,28 +125,7 @@ $.ajax({
     console.log("error" + errorThrown)
   }
 });
-var urlCiudades = "http://interlab.com.ec/app/movil/actions/ciudades.php"
 
-$.ajax({
-  url: urlCiudades,
-  dataType: "json",
-  success: function (data, textStatus, jqXHR) { 
-    //myApp.params.template7Data['sucursales'] = data;
-
-    if(data!=null && data!='' && data!='[]'){ 
-          
-          $.each(data,function(key,value){ 
-            id = value.id;
-            ciudad = value.ciudad;
-            $('#ciudad').append('<option value="'+id+'">'+ciudad+'</option>');
-          });
-        }   
-
-  },
-  error: function (jqXHR, textStatus, errorThrown) {
-    console.log("error" + errorThrown)
-  }
-});
 
 //CLICK ANALIZO LA BUSQUEDA DE PDF
 $( "#consultoPdf" ).click(function() {
@@ -202,6 +204,9 @@ $('.list-block-search').on('clearSearch', function(){
 })
 */
 myApp.onPageBeforeInit('cotizador', function (page) {
+
+
+
 
     $('.cotizadorDown').css('display','none');
     $(".examenes").css('display','none'); 
@@ -478,8 +483,33 @@ myApp.onPageBeforeInit('sucursales', function (page) {
 *****INDEX***********************************************************************************************************************************
 ************************************************************************************************************************************************
 */
-myApp.onPageBeforeInit('index', function (page) {
+myApp.onPageInit('index', function (page) {
+  
     myApp.closePanel();
+
+    var urlCiudades = "http://interlab.com.ec/app/movil/actions/ciudades.php"
+
+    $.ajax({
+      url: urlCiudades,
+      dataType: "json",
+      success: function (data, textStatus, jqXHR) { 
+        //myApp.params.template7Data['sucursales'] = data;
+
+        if(data!=null && data!='' && data!='[]'){ 
+              
+              $.each(data,function(key,value){ 
+                id = value.id;
+                ciudad = value.ciudad;
+                $('#ciudad').append('<option value="'+id+'">'+ciudad+'</option>');
+              });
+            }   
+
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log("error" + errorThrown)
+      }
+    });
+
 
 //Orden es 7777111 y la Clave 21099
 });
