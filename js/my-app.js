@@ -64,7 +64,7 @@ var myApp = new Framework7({
                     cargo: 'Especialista en Patología Clínica',
                     imagen : 'http://interlab.com.ec/wp-content/uploads/bfi_thumb/4-2zopmkscuyboa24z2f10jk.png'
                 }
-            ],
+            ]/*,
             administracion:[
                 {
                     nombre:'DR. JOSÉ GUEVARA AGUIRRE',
@@ -349,10 +349,10 @@ var myApp = new Framework7({
                 {
                     nombre: 'LCDA. BERTHA NICOLA ZAMBRANO'
                 },
-            ]
+            ]*/
 
         }, 
-        sucursales:{
+       /* sucursales:{
             norte:[
                 {
                     local: 'Laboratorio Principal',
@@ -584,7 +584,7 @@ var myApp = new Framework7({
                     direccion: '<b>LU-VI:</b> 07:00 - 19:00 horas, <b>SA:</b> 07:00 - 15:00 horas, '
                 }
             ]
-        }          
+        }        */  
     }
 });
 

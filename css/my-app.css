@@ -677,6 +677,14 @@ a.close-popup{
   display: none;
 }
 
+.observacion{
+  position: fixed;
+  bottom: 0;
+  font-size: x-small;
+  text-align: center;
+  padding: 3% 0 2%;
+  width: 100%;
+}
 /*
 ==========================================================================================================================
 FLEX
@@ -713,7 +721,8 @@ FLEX
 }
 .flex-page .size-70{
   /*background-color: purple;*/
-  height: 70%;
+  height: 55%;
+  overflow-y: scroll;
 }
 
 .flex-page .size-30{

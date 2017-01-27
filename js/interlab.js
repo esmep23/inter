@@ -89,6 +89,19 @@ $.ajax({
   }
 });
 
+var urlSucursales = "http://interlab.com.ec/app/movil/actions/sucursales.php";
+$.ajax({
+  url: urlSucursales,
+  dataType: "json",
+  success: function (data, textStatus, jqXHR) { 
+    
+    myApp.params.template7Data['sucursales']=data;
+    
+  },
+  error: function (jqXHR, textStatus, errorThrown) {
+    console.log("error" + errorThrown)
+  }
+});
 var urlCiudades = "http://interlab.com.ec/app/movil/actions/ciudades.php"
 
 $.ajax({
