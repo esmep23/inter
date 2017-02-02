@@ -8,7 +8,6 @@ $( document ).ready(function() {
       console.log(this.className);
       $(".panel-menu .list-block li").removeClass('itemActivo');
       $(this).addClass('itemActivo');
-
     });
 
     
@@ -47,6 +46,48 @@ var _cletraY=0;
 var _cletraZ=0;
 var globalLetras=0;
 
+/*
+--------------------------------------------------------------------------------
+TINYURL
+--------------------------------------------------------------------------------
+*/
+var apiKey = 'AIzaSyAKpFDcKIy374CFA7c4TZ13AOd1hXKUegw';
+function load() {
+  gapi.client.setApiKey(apiKey);
+  gapi.client.load('urlshortener', 'v1', showInputs);
+}
+function showInputs() {
+  //document.getElementById('requestFields').style.display = '';
+}
+
+function makeRequest() {
+  function writeResponse(resp) {
+  var responseText;
+  if (resp.code && resp.data[0].debugInfo == 'QuotaState: BLOCKED') {
+    responseText = 'Invalid API key provided. Please replace the "apiKey" value with your own.';
+  } else {
+    responseText = 'Short URL is: ' + resp.id;
+  }
+  //var infoDiv = document.getElementById('info');
+  //infoDiv.innerHTML = '';
+  //infoDiv.appendChild(document.createTextNode(responseText));
+  //alert(responseText);
+  pDf(responseText);
+}
+  //var longUrl = document.getElementById('longUrl').value;
+  var longUrl = 'https:\/\/docs.google.com\/gview?embedded=true&url=http:\/\/181.39.15.90\/ConsultaWeb\/pdf\/print_2621709.PDF';
+  console.log(longUrl);
+  var request = gapi.client.urlshortener.url.insert({
+    'longUrl': longUrl
+  });
+  request.execute(writeResponse);
+}
+
+/*
+--------------------------------------------------------------------------------
+TINY URL
+--------------------------------------------------------------------------------
+*/
 var url = "http://interlab.com.ec/wp-json/posts";
 $.ajax({
   url: url,
@@ -128,7 +169,10 @@ $.ajax({
 
 
 //CLICK ANALIZO LA BUSQUEDA DE PDF
-$( "#consultoPdf" ).click(function() {
+/*$( "#consultoPdf" ).click(function() {
+*/
+function pDf(url){
+
   var inAppBrowserRef;
   arg0 = $('#orden').val();
   arg1 = $('#clave').val();
@@ -154,7 +198,9 @@ $( "#consultoPdf" ).click(function() {
                 //alert(construURL);
                 //cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
         //SIwindow.open(construURL, '_system', 'location=no')
-        window.open(encodeURI('https://docs.google.com/gview?embedded=true&url=http://181.39.15.90/ConsultaWeb/pdf/print_2621709.PDF'), '_blank', 'location=yes,EnableViewPortScale=yes');
+       
+        //window.open(encodeURI('https://docs.google.com/gview?embedded=true&url=http://181.39.15.90/ConsultaWeb/pdf/print_2621709.PDF'), '_blank', 'location=yes,EnableViewPortScale=yes');
+        window.open(encodeURI(url), '_blank', 'location=no,EnableViewPortScale=no');
         //alert(2);
       }
       //cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099", '_blank', 'location=yes');
@@ -169,7 +215,7 @@ $( "#consultoPdf" ).click(function() {
   }
 
 
-});
+};
 
 console.log(myApp.template7Data);
 //mainView.router.load({pageName: 'noticias'});
