@@ -88,6 +88,42 @@ function makeRequest() {
 TINY URL
 --------------------------------------------------------------------------------
 */
+
+
+/*
+--------------------------------------------------------------------------------
+DETECT MOBILE OPERATING SYSTEM
+--------------------------------------------------------------------------------
+*/
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        alert("Windows Phone");
+        //return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        alert("Android");
+        //return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        alert("iOS");
+        //return "iOS";
+    }
+
+    return "unknown";
+}
+/*
+--------------------------------------------------------------------------------
+DETECT MOBILE OPERATING SYSTEM
+--------------------------------------------------------------------------------
+*/
+
+
 var url = "http://interlab.com.ec/wp-json/posts";
 $.ajax({
   url: url,
