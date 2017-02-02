@@ -1,5 +1,6 @@
 $( document ).ready(function() {
     console.log( "ready!" );
+    getMobileOperatingSystem();
     $(".popup-overlay").click(function() {
       myApp.closePanel();
     });
@@ -45,7 +46,7 @@ var _cletraX=0;
 var _cletraY=0; 
 var _cletraZ=0;
 var globalLetras=0;
-
+var dispositivo=0;
 /*
 --------------------------------------------------------------------------------
 TINYURL
@@ -100,22 +101,24 @@ function getMobileOperatingSystem() {
 
       // Windows Phone must come first because its UA also contains "Android"
     if (/windows phone/i.test(userAgent)) {
-        alert("Windows Phone");
+        //alert("Windows Phone");
         //return "Windows Phone";
     }
 
     if (/android/i.test(userAgent)) {
         alert("Android");
+        dispositivo = 1;
         //return "Android";
     }
 
     // iOS detection from: http://stackoverflow.com/a/9039885/177710
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         alert("iOS");
+        dispositivo = 2;
         //return "iOS";
     }
 
-    return "unknown";
+    //return "unknown";
 }
 /*
 --------------------------------------------------------------------------------
@@ -233,9 +236,13 @@ $( "#consultoPdf" ).click(function() {
                 //alert(construURL);
                 //cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
         //SIwindow.open(construURL, '_system', 'location=no')
-       
-        //window.open(encodeURI('https://docs.google.com/gview?embedded=true&url=http://181.39.15.90/ConsultaWeb/pdf/print_2621709.PDF'), '_blank', 'location=no,EnableViewPortScale=no');
-        window.open(encodeURI('http://181.39.15.90/ConsultaWeb/pdf/print_2621709.PDF'), '_blank', 'location=no,EnableViewPortScale=no');
+       //1 Android
+       //2 iOs
+         if(dispositivo == 1){
+          window.open(encodeURI('https://docs.google.com/gview?embedded=true&url=http://181.39.15.90/ConsultaWeb/pdf/print_2621709.PDF'), '_blank', 'location=no,EnableViewPortScale=no');
+         }else{
+          window.open(encodeURI('http://181.39.15.90/ConsultaWeb/pdf/print_2621709.PDF'), '_blank', 'location=no,EnableViewPortScale=no');
+         }
         //alert(2);
       }
       //cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099", '_blank', 'location=yes');
