@@ -150,10 +150,11 @@ $( "#consultoPdf" ).click(function() {
         $('.preload').css('display','none');
         //alert(1);
         
-        construURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1+'&arg2='+arg2;
-        //alert(construURL);
-        //cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
-        window.open(construURL, '_system', 'location=no')
+        //SIconstruURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1+'&arg2='+arg2;
+                //alert(construURL);
+                //cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
+        //SIwindow.open(construURL, '_system', 'location=no')
+        window.open(encodeURI('https://docs.google.com/gview?embedded=true&url=http://181.39.15.90/ConsultaWeb/pdf/print_2621709.PDF'), '_self', 'location=yes,EnableViewPortScale=yes');
         //alert(2);
       }
       //cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099", '_blank', 'location=yes');
