@@ -106,14 +106,14 @@ function getMobileOperatingSystem() {
     }
 
     if (/android/i.test(userAgent)) {
-        alert("Android");
+        //alert("Android");
         dispositivo = 1;
         //return "Android";
     }
 
     // iOS detection from: http://stackoverflow.com/a/9039885/177710
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        alert("iOS");
+        //alert("iOS");
         dispositivo = 2;
         //return "iOS";
     }
@@ -220,10 +220,45 @@ $( "#consultoPdf" ).click(function() {
     $('.preload').css('display','block');
     $.ajax({
     url: 'http://interlab.com.ec/app/movil/respuesta_servidor.php',
-    dataType: "text",
+    dataType: "json",
     data: {arg0: $('#orden').val(), arg1: $('#clave').val(), arg2: $('#ciudad').val()},
     success: function (data, textStatus, jqXHR) { 
-      console.log(data);
+      
+            if(data!=null && data!='' && data!='[]'){ 
+              
+              var miObjeto = new Object(),
+              miObjeto = data;
+              console.log(miObjeto.respuesta);
+
+              if(miObjeto.respuesta == 0){
+                $('.preload').css('display','none');
+                myApp.alert("Sus resultado de Exámenes aún no están disponibles. Recuerde que el tiempo aproximado es 24H", "INTERLAB");
+              }
+
+              if(miObjeto.respuesta == 1){
+                $('.preload').css('display','none');
+                //alert(1);
+                
+                //SIconstruURL = 'http://interlab.com.ec/app/movil/pdf.php?arg0='+arg0+'&arg1='+arg1+'&arg2='+arg2;
+                        //alert(construURL);
+                        //cordova.InAppBrowser.open(construURL, '_blank', 'location=yes');
+                //SIwindow.open(construURL, '_system', 'location=no')
+               //1 Android
+               //2 iOs
+                 if(dispositivo == 1){
+                  window.open(encodeURI('https://docs.google.com/gview?embedded=true&url='+miObjeto.url), '_blank', 'location=no,EnableViewPortScale=no');
+                 }else{
+                  window.open(encodeURI(miObjeto.url), '_blank', 'location=no,EnableViewPortScale=no');
+                 }
+                //alert(2);
+              }
+
+            }  
+
+      /*
+      --------------------------------------------------------------------------------------------
+      --------------------------------------------------------------------------------------------
+      --------------------------------------------------------------------------------------------
       if(data == 0){
         $('.preload').css('display','none');
         myApp.alert("Sus resultado de Exámenes aún no están disponibles. Recuerde que el tiempo aproximado es 24H", "INTERLAB");
@@ -246,6 +281,11 @@ $( "#consultoPdf" ).click(function() {
         //alert(2);
       }
       //cordova.InAppBrowser.open("http://interlab.com.ec/app/movil/pdf.php?arg0=7777111&arg1=21099", '_blank', 'location=yes');
+      
+      --------------------------------------------------------------------------------------------
+      --------------------------------------------------------------------------------------------
+      --------------------------------------------------------------------------------------------
+      */
     },
     error: function (jqXHR, textStatus, errorThrown) {
         console.log("error" + errorThrown)
