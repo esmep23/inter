@@ -192,8 +192,8 @@ var urlCiudades = "http://interlab.com.ec/app/movil/actions/ciudades.php"
       }
     });
 
-//var urlSucursales = "http://interlab.com.ec/app/movil/actions/sucursales.php";
-var urlSucursales = "http://interlab.com.ec/app/tefi/actions/sucursales2.php";
+var urlSucursales = "http://interlab.com.ec/app/movil/actions/sucursales.php";
+//var urlSucursales = "http://interlab.com.ec/app/tefi/actions/sucursales2.php";
 $.ajax({
   url: urlSucursales,
   dataType: "json",
