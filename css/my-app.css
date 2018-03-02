@@ -50,6 +50,10 @@ body,html{
   margin: 0;
   padding: 0;
 }
+
+#pageSucursales .list-block li:last-child{
+  display: none!important;
+}
 /*
 ------------------------------------
 ------------------
