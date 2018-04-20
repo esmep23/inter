@@ -51,7 +51,7 @@ body,html{
   padding: 0;
 }
 
-#pageSucursales .list-block li:last-child{
+#pageSucursales .list-block > li:last-child{
   display: none!important;
 }
 /*
