@@ -117,10 +117,10 @@
 
 		<gap:splash src="splash.png" />
 		
-		<!--para compilar en ios hay que borrar esto-->
+		<!--para compilar en ios hay que borrar esto
 		<feature name="InAppBrowser">
 		    <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-		</feature>
+		</feature>-->
 		<!--/ios-->
 
 		<access origin="*" />
