@@ -14,9 +14,9 @@
 		</author>
 				
 		<gap:plugin name="cordova-plugin-whitelist" source="npm" />
-		<!--para compilar en ios hay que borrar esto
+		<!--para compilar en ios hay que borrar esto-->
 		<gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
-		<gap:plugin name="org.apache.cordova.statusbar" source="npm" />-->
+		<gap:plugin name="org.apache.cordova.statusbar" source="npm" />
 		<!--/ios-->
     	<preference name="phonegap-version" value="cli-6.3.0" />
 		<preference name="orientation" value="portrait" />
@@ -117,10 +117,10 @@
 
 		<gap:splash src="splash.png" />
 		
-		<!--para compilar en ios hay que borrar esto
+		<!--para compilar en ios hay que borrar esto-->
 		<feature name="InAppBrowser">
 		    <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-		</feature>-->
+		</feature>
 		<!--/ios-->
 
 		<access origin="*" />
