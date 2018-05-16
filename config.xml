@@ -2,8 +2,8 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "ec.pocket.interlab"
-		versionCode="6.0.1"
-		version   = "6">
+		versionCode="7.0.1"
+		version   = "7">
 		<name>
 			Interlab
 		</name>
