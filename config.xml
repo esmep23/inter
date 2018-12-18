@@ -38,7 +38,7 @@
 		<preference name="KeyboardDisplayRequiresUserAction" value="true" />
 		<preference name="HideKeyboardFormAccessoryBar" value="true" />
 		<preference name="SuppressesIncrementalRendering" value="true" />
-		<preference name="android-minSdkVersion" value="7" />
+		<preference name="android-minSdkVersion" value="26" />
 		<preference name="android-installLocation" value="internalOnly" />
 		<preference name="SplashScreenDelay" value="3000" />
 		<preference name="ErrorUrl" value=""/>
@@ -52,6 +52,7 @@
 		<preference name="StatusBarOverlaysWebView" value="true" />
 		<preference name="StatusBarBackgroundColor" value="#018673"/>
 		<preference name="StatusBarStyle" value="darkcontent" />
+		
 
 
 		<gap:platform name="ios" />
