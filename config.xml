@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
-		id        = "ec.pocket.interlabapp"
+		//ANDROID id        = "ec.pocket.interlabapp"
+		id        = "ec.pocket.interlab"
 		versionCode="8.0.1"
 		version   = "8">
 		<name>
